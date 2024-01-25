@@ -1,0 +1,77 @@
+header{
+    
+
+    .topbar{
+        background-color: #fafafa;
+       
+        
+        .container{
+            
+                .top-div{
+                    display: flex;
+                    
+
+                    .top-left{
+                        display: flex;
+                    @include flex($just: space-between, $align: center);
+                    .logo{
+                        width: 27px;
+                        height: 28px;
+                        padding-right:10px;
+                        img{
+                            @include photo();
+                        }
+                    }
+
+                        .top-menu{
+                            display: flex;
+                            li{
+                                a{
+                                    padding: 0 5px;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    .top-right{
+                        font-size: 12px;
+                    @include flex($just: space-between, $align: center);
+                    box-shadow: 0 2px 14px -10px rgba(0,0,0,.3);
+                    
+                    .personal,.business{
+                        border-radius: 5px;
+                        height: 35px;
+                        padding: 0 20px;
+                        @include center();
+                        background-color: #fff;
+
+
+                    }
+                    .personal{
+                        color: $primaryColor;
+                        border: 1px solid $primaryColor;
+                        font-weight: 600;
+                    }
+                    .business{
+                        font-weight: 400;
+
+
+                    }
+                    .dark-mode-icon{
+                        padding: 9px 10px;
+                        border-radius: 5px;
+                        background-color: $secondaryColor;
+                        color: #fff;
+                    }
+                    .lang{
+                        padding: 0 8px;
+                        background-color: #fff;
+                        margin-right: 10px;
+                        line-height: 12px;
+                    }
+
+                    }
+                }
+        }
+    }
+}

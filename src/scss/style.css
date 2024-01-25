@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ff7a00;
+  font-size: 15px;
+}
+body .roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+body .roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+body .roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+body .roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+body .roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body .roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+body .roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body .roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+body .roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+body .roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+body .roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+body .roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .topbar {
+  background-color: #fafafa;
+}
+header .topbar .container .top-div {
+  display: flex;
+}
+header .topbar .container .top-div .top-left {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .topbar .container .top-div .top-left .logo {
+  width: 27px;
+  height: 28px;
+  padding-right: 10px;
+}
+header .topbar .container .top-div .top-left .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .topbar .container .top-div .top-left .top-menu {
+  display: flex;
+}
+header .topbar .container .top-div .top-left .top-menu li a {
+  padding: 0 5px;
+  font-size: 12px;
+}
+header .topbar .container .top-div .top-right {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 14px -10px rgba(0, 0, 0, 0.3);
+}
+header .topbar .container .top-div .top-right .personal, header .topbar .container .top-div .top-right .business {
+  border-radius: 5px;
+  height: 35px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+header .topbar .container .top-div .top-right .personal {
+  color: #ff7a00;
+  border: 1px solid #ff7a00;
+  font-weight: 600;
+}
+header .topbar .container .top-div .top-right .business {
+  font-weight: 400;
+}
+header .topbar .container .top-div .top-right .dark-mode-icon {
+  padding: 9px 10px;
+  border-radius: 5px;
+  background-color: #323232;
+  color: #fff;
+}
+header .topbar .container .top-div .top-right .lang {
+  padding: 0 8px;
+  background-color: #fff;
+  margin-right: 10px;
+  line-height: 12px;
+}/*# sourceMappingURL=style.css.map */

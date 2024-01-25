@@ -1,0 +1,36 @@
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($just:null,$align:null,$f-wrap:null){
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+    flex-wrap: $f-wrap;
+}
+
+@mixin photo(){
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+$breakpoints:(
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    wide: 1200px
+);
+
+@mixin breakpoint($name){
+    @if map-has-key($breakpoints, $name){
+        @media (min-width: map-get($breakpoints, $name)) {
+            @content
+        }
+    } 
+    @else {
+        @warn "Warning : `#{$name}` is not a valid breakpoint name."
+    }
+}
