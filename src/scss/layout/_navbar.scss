@@ -1,44 +1,50 @@
-header{
-    
+header {
 
-    .topbar{
+
+    .topbar {
         background-color: #fafafa;
-       
-        
-        .container{
-            
-                .top-div{
-                    display: flex;
-                    
 
-                    .top-left{
-                        display: flex;
+        .container {
+
+            .top-div {
+                @include flex($just: space-between, $align: center);
+
+                height: 55px;
+
+
+                .top-left {
+                 
                     @include flex($just: space-between, $align: center);
-                    .logo{
+
+                    .logo {
                         width: 27px;
                         height: 28px;
-                        padding-right:10px;
-                        img{
+                        margin-right: 15px;
+
+                        img {
                             @include photo();
                         }
                     }
 
-                        .top-menu{
-                            display: flex;
-                            li{
-                                a{
-                                    padding: 0 5px;
-                                    font-size: 12px;
-                                }
+                    .top-menu {
+                        display: flex;
+
+                        li {
+                            a {
+                                padding: 0 10px;
+                                font-size: 13px;
                             }
                         }
                     }
-                    .top-right{
-                        font-size: 12px;
+                }
+
+                .top-right {
+                    font-size: 12px;
                     @include flex($just: space-between, $align: center);
-                    box-shadow: 0 2px 14px -10px rgba(0,0,0,.3);
-                    
-                    .personal,.business{
+                    box-shadow: 0 2px 14px -10px rgba(0, 0, 0, .3);
+
+                    .personal,
+                    .business {
                         border-radius: 5px;
                         height: 35px;
                         padding: 0 20px;
@@ -47,31 +53,92 @@ header{
 
 
                     }
-                    .personal{
+
+                    .personal {
                         color: $primaryColor;
                         border: 1px solid $primaryColor;
                         font-weight: 600;
+
+
                     }
-                    .business{
+
+                    .business {
                         font-weight: 400;
+                        background-color: #fff;
+                        margin-right: 10px;
+                        color: $secondaryColor;
 
 
                     }
-                    .dark-mode-icon{
-                        padding: 9px 10px;
+
+                    .dark-mode-icon {
+                        padding: 8px 12px;
                         border-radius: 5px;
                         background-color: $secondaryColor;
                         color: #fff;
-                    }
-                    .lang{
-                        padding: 0 8px;
-                        background-color: #fff;
                         margin-right: 10px;
-                        line-height: 12px;
-                    }
 
                     }
+
+                    .lang {
+                        padding: 10px 8px;
+                        background-color: #fff;
+                        border-radius: 5px;
+                        color: $secondaryColor;
+                        margin-right: 10px;
+                        line-height: 12px;
+                        font-weight: bold;
+
+                    }
+
+                    .search-icon {
+                        background-color: #fff;
+                        padding: 9px 12px;
+                        color: $secondaryColor;
+                        border-radius: 5px;
+
+
+
+                    }
+
                 }
+            }
+        }
+    }
+
+    .nav{
+        .container{
+            .nav-menu{
+                @include flex($just: space-between, $align: center);
+                padding: 30px 0;
+
+                .menu-services{
+
+                    .services{
+                        display: flex;
+                        li{
+                            padding-right: 30px;
+                            a{
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                .hot-call{
+                    border: 1px solid rgba(0, 0, 0, 0.295);
+                    padding: 10px 20px;
+                    border-radius: 25px;
+                    i{
+                        color: $primaryColor;
+                    }
+                    span{
+                        color: $secondaryColor;
+                        font-weight: bold;
+                        letter-spacing: -2px;
+                    }
+                }
+            }
         }
     }
 }
