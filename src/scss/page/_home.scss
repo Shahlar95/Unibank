@@ -4,7 +4,6 @@
         .swiper {
             width: 100%;
             height: 100%;
-
             background-color: #fff;
 
             .swiper-wrapper {
@@ -15,16 +14,22 @@
                     font-size: 18px;
                     color: #fff;
                     @include flex($just: space-between, $align: center);
+                    flex-direction: column-reverse;
                     background-color: $darkPrimaryColor;
                     height: 80vh;
                     border-radius: 10px;
-
+                    @include breakpoint('large'){
+                        
+                        flex-direction:row;
+                    }
 
                     .slider-img {
                         padding: 0px 30px;
-                        width: 50%;
-                        height: 100%;
-
+                        height: 200px;
+                        @include breakpoint('large'){
+                            width: 50%;
+                            height: 100%;
+                        }
                         // overflow: hidden;
                         img {
                             @include photo();
@@ -32,20 +37,34 @@
                     }
 
                     .slider-content {
-                        width: 50%;
+                        width: 100%;
                         padding: 15px;
-                        text-align: left;
+                        text-align: center;
+                       padding: 50px 0;
+                        @include breakpoint('large'){
+                            text-align: left;
+                            width: 50%;
 
+                        }
 
                         h2 {
-                            font-size: 40px;
+                            font-size: 22px;
                             font-weight: bold;
                             margin-bottom: 20px;
+                            @include breakpoint('large'){
+                            font-size: 40px;
+
+                            }
                         }
 
                         p {
-                            padding: 20px 0 30px;
+                            padding: 0px 0 30px;
                             font-size: 15px;
+                            @include breakpoint('large'){
+                                font-size: 11px;
+                                padding: 20px 0 30px;
+    
+                                }
                         }
 
                         button {
@@ -84,7 +103,7 @@
         .inner {
             @include center();
             flex-direction: column;
-            background-color: #ecececc7;
+            background-color: $mainBackgroundColor;
             border-radius: 10px;
             padding: 30px 20px;
 
@@ -126,9 +145,16 @@
 
     .container {
         .ucard-info {
-            display: flex;
-            background-color: #ecececc7;
+            @include center();
+            flex-direction: column;
+            background-color: $mainBackgroundColor;
             border-radius: 10px;
+            @include breakpoint('large'){
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            }
 
             .ucard-image {
                 width: 45%;
@@ -144,11 +170,13 @@
             }
 
             .ucard-content {
-                width: 50%;
+                width: 100%;
                 padding: 20px 50px;
                 @include flex($just: center);
                 flex-direction: column;
-
+                @include breakpoint('large'){
+                    width: 50%;
+                }
                 h2 {
                     font-size: 28px;
                     color: $darkPrimaryColor;
@@ -158,26 +186,46 @@
                     font-size: 14px;
                     padding: 15px 0;
                 }
-
-                button {
-                    padding: 10px 20px;
-                    border-radius: 20px;
-                    border: 1px solid rgba(0, 0, 0, 0.151);
-                    font-weight: bold;
-                    color: #545454;
-                    text-align: center;
+                .ucard-btn{
+                    display: flex;
+                    button {
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        border: 1px solid rgba(0, 0, 0, 0.151);
+                        font-weight: bold;
+                        color: #545454;
+                        text-align: center;
+                        
+                    }
+    
+                    .more-information {
+                        background-color: $darkPrimaryColor;
+                        border: 1px solid $darkPrimaryColor;
+                        color: #fff;
+                        display: block;
+                        width: 100%;
+                        @include breakpoint('large'){
+                           display: inline-block;
+                           width: 30%;
+    
+                        }
+    
+                    }
+    
+                    .partnership {
+                        @include breakpoint('large'){
+                            margin: 0 10px;
+                            width: 30%;
+                        }
+                    }
+                    .partnership, .personal-cabinet{
+                        width: 48%;
+                        @include breakpoint('large'){
+                            width: 30%;
+                        }
+                    }
                 }
-
-                .more-information {
-                    background-color: $darkPrimaryColor;
-                    border: 1px solid $darkPrimaryColor;
-                    color: #fff;
-
-                }
-
-                .partnership {
-                    margin: 0 10px;
-                }
+               
             }
         }
     }
@@ -189,7 +237,7 @@
     .container {
         .ucard-download-info {
             display: flex;
-            background-color: #ecececc7;
+            background-color: $mainBackgroundColor;
             border-radius: 10px;
 
             .ucard-download-content {
@@ -251,8 +299,9 @@
     
     .container{
         .exchange-info{
-            background-color: #ecececc7;
+            background-color: $mainBackgroundColor;
             padding: 40px 70px;
+            border-radius: 10px;
             .exchange-header{
                 h2{
                     font-size: 28px;
@@ -270,9 +319,180 @@
             }
             .exchange-calculator{
                 background-color: #fff;
-                display: flex;
-                justify-content: space-between;
+                @include flex($just:space-between, $align:center);
+                padding: 30px 30px;
+                border-radius: 10px;
+                .calculator-header{
+                    h2{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                .calculator-area{
+                    @include flex($just:space-between,$align:center);
+                    .calculator-left,.calculator-right{
+                        padding: 20px 20px;
+                        border: 1px solid rgba(50,50,50,.1);
+                        border-radius: 5px;
+                        width: 280px;
+                        input{
+                            border: none;
+                        }
+                        input:focus{
+                            outline: none;
+                        }
+                        select{
+                            border: none;
+                        }
+                    }
+                    .calculator-icon{
+                        color: $darkPrimaryColor;
+                        padding: 0 20px;
+                        font-size: 25px;
+                    }
+
+                   
+                }
             }
         }
     }
 }
+
+.news{
+    .container{
+        .news-cards{
+            .inner{
+                background-color: $mainBackgroundColor;
+                border-radius: 10px;
+                padding: 30px;
+                transition: .3s linear;
+                cursor: pointer;
+                .news-header{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $darkPrimaryColor;
+                transition: .3s linear;
+
+                }
+                .news-text{
+                    font-size: 14px;
+                    font-weight: 200;
+                }
+                .news-date{
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+
+            }
+            .inner:hover{
+                background-color: $darkPrimaryColor;
+                color: #fff;
+                .news-header{
+                    color: #fff;
+                }
+            }
+            .common-news{
+                text-align: center;
+                padding: 30px 0 0;
+                button{   
+                    font-size: 14px;
+                    border-radius: 25px;
+                    background-color: #ff6400;
+                    color: #fff;
+                    padding: 17px 25px;
+                    line-height: 16px;
+                    border: none;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.atm{
+    .container{
+        .atm-contact{
+            @include flex($just:space-between);
+            .atm-adress{
+                background-color: $mainBackgroundColor;
+                @include flex($just:space-between);
+                margin-right: 15px;
+                padding: 45px 65px;
+            border-radius: 10px;
+
+                .atm-content{
+                @include flex($just:center);
+                flex-direction: column;
+
+                    h2{
+                        font-size: 28px;
+                        color: $darkPrimaryColor;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 10px 0;
+                    }
+                    button{
+                        padding: 15px 25px;
+                        border-radius: 25px;
+                        background-color: $darkPrimaryColor;
+                        border: none;
+                        color: #fff;
+                        font-weight: bold;
+                        cursor: pointer;
+                        
+                    }
+                }
+                .atm-image{
+                    position: relative;
+                    height: 250px;
+                    bottom: -45px;
+                        right: 0;
+                    img{
+                        @include photo();
+                    }
+                }
+            }
+            .contact{
+                background-color: $mainBackgroundColor;
+            border-radius: 10px;
+            padding: 55px 65px;
+            @include flex($just:center);
+            flex-direction: column;
+            position: relative;
+            .contact-image{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+          
+            h2{
+                font-size: 28px;
+                color: $darkPrimaryColor;
+                font-weight: bold;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                padding: 10px 0;
+            }
+            button{
+                padding: 15px 25px;
+                border-radius: 25px;
+                background-color: $darkPrimaryColor;
+                border: none;
+                color: #fff;
+                font-weight: bold;
+                cursor: pointer;
+
+            }
+
+            }
+        }
+    }
+}
+
