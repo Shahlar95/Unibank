@@ -2,8 +2,20 @@
 .container{
     .footer-menu{
         padding-top: 55px;
+        position: relative;
         .footer-main-menu{
+           
+            visibility: hidden;
+            position: absolute;
+            left: -1000px;
+
+            @include breakpoint('large'){
             @include flex($just:space-between);
+            flex-wrap: wrap;
+            visibility: visible;
+            position: static;
+            left: auto;
+            }
             li{
                 a{
                     font-weight: bold;
@@ -24,10 +36,15 @@
             }
         }
         .footer-smm{
-            @include flex($just:space-between,$align:center);
+            @include flex($just:space-around,$align:center);
             padding: 50px 0 0px;
+            @include breakpoint('large'){
+            @include flex($just:space-between,$align:center);
+
+            }
             .smm-icon{
                 display: flex;
+                text-align: center;
                 li{
                         margin: 0 10px;
                         width: 25px;
@@ -45,14 +62,34 @@
                     background-color: $darkPrimaryColor;
                 }
             }
+            .unibank-politics{
+
+                text-align: center;
+                margin-bottom: 0;
+            }
         }
         .footer-more{
-            @include flex($just:space-between);
+            @include flex($just:space-between,$align:center);
+            flex-direction: column-reverse;
             padding: 30px 0;
+            @include breakpoint('large'){
+            @include flex($just:space-between,$align:center);
+            flex-direction: row;
+
+            }
             .footer-liscense{
+                padding-top: 25px;
+                @include breakpoint('large'){
+                padding-top: 0px;
+
+                }
                 h4,p{
                     font-size: 12px;
-
+                    text-align: center;
+                    
+                    @include breakpoint('large'){
+                        text-align: left;
+                    }
                 }
             }
             .footer-image{

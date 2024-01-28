@@ -1,5 +1,6 @@
 .slider-swiper {
     padding: 0px;
+
     .container {
         .swiper {
             width: 100%;
@@ -18,18 +19,21 @@
                     background-color: $darkPrimaryColor;
                     height: 80vh;
                     border-radius: 10px;
-                    @include breakpoint('large'){
-                        
-                        flex-direction:row;
+
+                    @include breakpoint('large') {
+
+                        flex-direction: row;
                     }
 
                     .slider-img {
                         padding: 0px 30px;
                         height: 200px;
-                        @include breakpoint('large'){
+
+                        @include breakpoint('large') {
                             width: 50%;
                             height: 100%;
                         }
+
                         // overflow: hidden;
                         img {
                             @include photo();
@@ -38,12 +42,15 @@
 
                     .slider-content {
                         width: 100%;
-                        padding: 15px;
                         text-align: center;
-                       padding: 50px 0;
-                        @include breakpoint('large'){
+                        padding: 50px 0px;
+                        
+
+                        @include breakpoint('large') {
                             text-align: left;
                             width: 50%;
+                            padding: 50px 25px;
+                            
 
                         }
 
@@ -51,20 +58,22 @@
                             font-size: 22px;
                             font-weight: bold;
                             margin-bottom: 20px;
-                            @include breakpoint('large'){
-                            font-size: 40px;
+
+                            @include breakpoint('large') {
+                                font-size: 40px;
 
                             }
                         }
 
                         p {
                             padding: 0px 0 30px;
-                            font-size: 15px;
-                            @include breakpoint('large'){
-                                font-size: 11px;
+                            font-size: 11px;
+
+                            @include breakpoint('large') {
+                                font-size: 15px;
                                 padding: 20px 0 30px;
-    
-                                }
+
+                            }
                         }
 
                         button {
@@ -149,11 +158,12 @@
             flex-direction: column;
             background-color: $mainBackgroundColor;
             border-radius: 10px;
-            @include breakpoint('large'){
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+
+            @include breakpoint('large') {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
 
             .ucard-image {
@@ -174,9 +184,11 @@
                 padding: 20px 50px;
                 @include flex($just: center);
                 flex-direction: column;
-                @include breakpoint('large'){
+
+                @include breakpoint('large') {
                     width: 50%;
                 }
+
                 h2 {
                     font-size: 28px;
                     color: $darkPrimaryColor;
@@ -186,8 +198,16 @@
                     font-size: 14px;
                     padding: 15px 0;
                 }
-                .ucard-btn{
+
+                .ucard-btn {
                     display: flex;
+                    flex-direction: column;
+
+                    @include breakpoint('large') {
+                        display: flex;
+                        flex-direction: row;
+                    }
+
                     button {
                         padding: 10px 20px;
                         border-radius: 20px;
@@ -195,37 +215,62 @@
                         font-weight: bold;
                         color: #545454;
                         text-align: center;
-                        
+
+
                     }
-    
-                    .more-information {
-                        background-color: $darkPrimaryColor;
-                        border: 1px solid $darkPrimaryColor;
-                        color: #fff;
-                        display: block;
-                        width: 100%;
-                        @include breakpoint('large'){
-                           display: inline-block;
-                           width: 30%;
-    
-                        }
-    
-                    }
-    
-                    .partnership {
-                        @include breakpoint('large'){
+
+                    .ucard-btn-more {
+                        text-align: center;
+                        @include center();
+                        margin: 0 0px;
+
+                        @include breakpoint('large') {
+
                             margin: 0 10px;
-                            width: 30%;
+
+
+                        }
+
+                        .more-information {
+                            background-color: $darkPrimaryColor;
+                            border: 1px solid $darkPrimaryColor;
+                            color: #fff;
+                            width: 100%;
+
+                            @include breakpoint('large') {
+
+                                width: auto;
+
+                            }
+
                         }
                     }
-                    .partnership, .personal-cabinet{
-                        width: 48%;
-                        @include breakpoint('large'){
-                            width: 30%;
+
+                    .partner-personal {
+                        display: flex;
+                        padding: 10px 0;
+
+                        .personal-cabinet {
+                            margin-left: 10px;
+                            width: 50%;
+
+                            @include breakpoint('large') {
+                                width: auto;
+                            }
+                        }
+
+                        .partnership {
+                            width: 50%;
+
+                            @include breakpoint('large') {
+                                width: auto;
+                            }
                         }
                     }
+
+                  
                 }
-               
+
             }
         }
     }
@@ -237,30 +282,48 @@
     .container {
         .ucard-download-info {
             display: flex;
+            flex-direction: column;
+            // @include center();
             background-color: $mainBackgroundColor;
             border-radius: 10px;
+            @include breakpoint('large'){
+                display: flex;
+                flex-direction: row;
+            }
 
             .ucard-download-content {
-                padding: 0 20px 0px 70px;
-                width: 50%;
+                padding: 20px 20px 0px;
+                width: auto;
                 @include flex($just: center);
                 flex-direction: column;
-
+                @include breakpoint('large'){
+                    padding: 0 20px 0px 70px;
+                    width: 50%;
+                }
                 h2 {
-                    font-size: 28px;
+                    font-size: 20px;
                     color: $darkPrimaryColor;
                     font-weight: bold;
+                    @include breakpoint('large'){
+                        font-size: 28px;
+                    }
                 }
 
                 p {
-                    font-size: 15px;
-                    padding: 15px 0 15px;
+                    font-size: 12px;
+                    padding: 10px 0;
+                    @include breakpoint('large'){
+                        font-size: 15px;
+                    }
                 }
 
                 .ucard-download-store {
                     display: flex;
-                    padding: 30px 0;
+                    padding: 0px 0 10px;
+                    @include breakpoint('large'){
+                        padding: 30px 0;
 
+                    }
                     .app-store {
                         margin: 0 15px;
                     }
@@ -279,124 +342,162 @@
                     }
                 }
             }
-            .ucard-download-image{
-                position: relative;
-                height: 400px;
-                width: 45%;
-                img{
-                    position: absolute;
-                    top: -95px;
-                    right: 0;
-                    height: 495px;
 
+            .ucard-download-image {
+                @include flex($just:center);
+                @include breakpoint('large'){
+                    position: relative;
+                    height: 400px;
+                    width: 45%;
+                }
+                img {
+                   
+                    @include breakpoint('large'){
+                        position: absolute;
+                        top: -95px;
+                        right: 0;
+                        height: 495px;
+                    }
                 }
             }
         }
     }
 }
 
-.exchange{
-    
-    .container{
-        .exchange-info{
+.exchange {
+
+    .container {
+        .exchange-info {
             background-color: $mainBackgroundColor;
             padding: 40px 70px;
             border-radius: 10px;
-            .exchange-header{
-                h2{
+
+            .exchange-header {
+                h2 {
                     font-size: 28px;
                     color: $darkPrimaryColor;
                     font-weight: bold;
                 }
-                
+
             }
-            .exchange-money{
+
+            .exchange-money {
                 padding: 50px 0;
-                h2{
+
+                h2 {
                     font-size: 18px;
-                    
+
                 }
             }
-            .exchange-calculator{
+
+            .exchange-calculator {
                 background-color: #fff;
-                @include flex($just:space-between, $align:center);
+                @include flex($just: space-between, $align: center);
+                flex-direction: column;
                 padding: 30px 30px;
                 border-radius: 10px;
-                .calculator-header{
-                    h2{
+                @include breakpoint('large'){
+                    flex-direction: row;
+                }
+
+                .calculator-header {
+                    h2 {
                         font-size: 18px;
                     }
-                    p{
+
+                    p {
                         font-size: 12px;
                     }
                 }
-                .calculator-area{
-                    @include flex($just:space-between,$align:center);
-                    .calculator-left,.calculator-right{
+
+                .calculator-area {
+
+                    @include flex($just: space-between, $align: center);
+                    flex-direction: column;
+                        @include breakpoint('large'){
+                            flex-direction: row;
+                        }
+                    .calculator-left,
+                    .calculator-right {
                         padding: 20px 20px;
-                        border: 1px solid rgba(50,50,50,.1);
+                        border: 1px solid rgba(50, 50, 50, .1);
                         border-radius: 5px;
                         width: 280px;
-                        input{
+
+                        input {
                             border: none;
                         }
-                        input:focus{
+
+                        input:focus {
                             outline: none;
                         }
-                        select{
+
+                        select {
                             border: none;
                         }
                     }
-                    .calculator-icon{
+
+                    .calculator-icon {
                         color: $darkPrimaryColor;
                         padding: 0 20px;
                         font-size: 25px;
+                        visibility: hidden;
+                        @include breakpoint('large'){
+                            visibility: visible;
+                        }
                     }
 
-                   
+
                 }
             }
         }
     }
 }
 
-.news{
-    .container{
-        .news-cards{
-            .inner{
+.news {
+    .container {
+        .news-cards {
+            .inner {
                 background-color: $mainBackgroundColor;
                 border-radius: 10px;
                 padding: 30px;
                 transition: .3s linear;
                 cursor: pointer;
-                .news-header{
+
+                .news-header {
                     font-size: 16px;
                     font-weight: bold;
                     color: $darkPrimaryColor;
-                transition: .3s linear;
+                    transition: .3s linear;
 
                 }
-                .news-text{
+
+                .news-text {
                     font-size: 14px;
                     font-weight: 200;
                 }
-                .news-date{
+
+                .news-date {
                     font-size: 12px;
                     line-height: 12px;
                 }
 
             }
-            .inner:hover{
+
+            .inner:hover {
                 background-color: $darkPrimaryColor;
                 color: #fff;
-                .news-header{
+
+                .news-header {
                     color: #fff;
                 }
             }
-            .common-news{
+
+            .common-news {
                 text-align: center;
                 padding: 30px 0 0;
-                button{   
+
+                button {
                     font-size: 14px;
                     border-radius: 25px;
                     background-color: #ff6400;
@@ -411,32 +512,41 @@
     }
 }
 
-.atm{
-    .container{
-        .atm-contact{
-            @include flex($just:space-between);
-            .atm-adress{
+.atm {
+    .container {
+        .atm-contact {
+            @include flex($just: space-between);
+            flex-direction: column;
+            @include breakpoint('large'){
+                flex-direction: row;
+            }
+
+            .atm-adress {
                 background-color: $mainBackgroundColor;
-                @include flex($just:space-between);
-                margin-right: 15px;
+                @include flex($just: space-between);
                 padding: 45px 65px;
-            border-radius: 10px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+                @include breakpoint('large'){
+                    margin: 0 15px 0 0;
+                }
+                .atm-content {
+                    @include flex($just: center);
+                    flex-direction: column;
 
-                .atm-content{
-                @include flex($just:center);
-                flex-direction: column;
-
-                    h2{
+                    h2 {
                         font-size: 28px;
                         color: $darkPrimaryColor;
                         font-weight: bold;
                     }
-                    p{
+
+                    p {
                         font-size: 14px;
                         font-weight: 400;
                         padding: 10px 0;
                     }
-                    button{
+
+                    button {
                         padding: 15px 25px;
                         border-radius: 25px;
                         background-color: $darkPrimaryColor;
@@ -444,55 +554,60 @@
                         color: #fff;
                         font-weight: bold;
                         cursor: pointer;
-                        
+
                     }
                 }
-                .atm-image{
+
+                .atm-image {
                     position: relative;
                     height: 250px;
                     bottom: -45px;
-                        right: 0;
-                    img{
+                    right: 0;
+
+                    img {
                         @include photo();
                     }
                 }
             }
-            .contact{
-                background-color: $mainBackgroundColor;
-            border-radius: 10px;
-            padding: 55px 65px;
-            @include flex($just:center);
-            flex-direction: column;
-            position: relative;
-            .contact-image{
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-          
-            h2{
-                font-size: 28px;
-                color: $darkPrimaryColor;
-                font-weight: bold;
-            }
-            p{
-                font-size: 14px;
-                font-weight: 400;
-                padding: 10px 0;
-            }
-            button{
-                padding: 15px 25px;
-                border-radius: 25px;
-                background-color: $darkPrimaryColor;
-                border: none;
-                color: #fff;
-                font-weight: bold;
-                cursor: pointer;
 
-            }
+            .contact {
+                background-color: $mainBackgroundColor;
+                border-radius: 10px;
+                padding: 55px 65px;
+                @include flex($just: center);
+                flex-direction: column;
+                position: relative;
+
+                .contact-image {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                h2 {
+                    font-size: 28px;
+                    color: $darkPrimaryColor;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 10px 0;
+                }
+
+                button {
+                    padding: 15px 25px;
+                    border-radius: 25px;
+                    background-color: $darkPrimaryColor;
+                    border: none;
+                    color: #fff;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                }
 
             }
         }
     }
 }
-
