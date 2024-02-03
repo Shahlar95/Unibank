@@ -1,0 +1,75 @@
+.credits{
+    .container{
+        .credit-head{
+            padding-bottom: 15px;
+          h2{
+            color: $darkPrimaryColor;
+            font-weight: bold;
+          }
+        }
+        .credit-information{
+          .inner{
+            background-color: $mainBackgroundColor;
+            padding: 30px 60px;
+            border-radius: 10px;
+            height: 100%;
+            .icon{
+              font-size: 50px;
+              color: $darkPrimaryColor;
+            }
+            h2{
+              font-size: 25px;
+              font-weight: bold;
+              color: black;
+            }
+            .credit-more{
+              padding: 20px 0;
+              .credit-order{
+                padding: 15px 30px;
+                border-radius: 25px;
+                border: none;
+                background-color: $darkPrimaryColor;
+                font-weight: bold;
+                color: #fff;
+
+                a{
+                 color: #fff;
+
+               }
+                .long-arrow{
+                  i{
+                    padding-left: 20px;
+                    font-size: 20px;
+                    
+                  }
+                }
+              }
+              .more-information{
+                padding: 10px 30px;
+                border-radius: 25px;
+                border: 1px solid rgba(128, 128, 128, 0.267);
+                font-weight: bold;
+                margin-left: 10px;
+              }
+            }
+
+          }
+        }
+        .credit-more-information{
+         
+          button{
+            padding: 15px 30px;
+            border-radius: 25px;
+            border: none;
+            background-color: $darkPrimaryColor;
+            font-weight: bold;
+            color: #fff;
+            i{
+              padding-left: 20px;
+              font-size: 20px;
+              
+            }
+          }
+        }
+    }
+}

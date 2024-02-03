@@ -1,0 +1,105 @@
+.order{
+    background-color: $mainBackgroundColor;
+    // height: 100vh;
+    .container{
+      
+       @include center();
+
+        .order-page{
+            @include center();
+            flex-direction: column;
+            max-width: 800px;
+            min-width: 742px;
+            .order-head{
+                @include flex($just:space-between);
+                padding: 30px 0px;
+                width: 100%;
+            }
+            .order-form{
+                background-color: #fff;
+                border-radius: 10px;
+    
+                h2{
+                    text-align: center;
+                    color: $darkPrimaryColor;
+                    padding: 30px 0;
+                    position: relative;
+                    .order-border{
+                        position: absolute;
+                        left: 46%;
+                        bottom: 5%;
+                        height: 3px;
+                        background-color: $darkPrimaryColor;
+                        width: 7%;
+                        text-align: center;
+                    }
+                }
+                .credit-order{
+                  
+                    .order-inputs{
+                        display: flex;
+                        // flex-wrap: wrap;
+                        flex-direction: row;
+                        width: 85%;
+                        margin: 10px auto;
+                        .order-input{
+                            display: flex;
+                            overflow: hidden;
+                            width: 49%;
+                            float: left;
+                            margin: 10px 15px;
+                            border: 1px solid rgba(0, 0, 0, 0.267);
+                            padding: 15px 10px;
+                            border-radius: 5px;
+                            .order-img{
+                                width: 24px;
+                                
+                                img{
+                                    @include photo();
+                                }
+                            }
+                        
+                        input{
+                            border: none;
+                            padding: 0 15px;
+                            
+                        }
+                        input:focus{
+                            outline: none;
+                        }
+                        }
+                        #order-porfit{
+                            width: 46%;
+                        }
+                    }
+                }
+            }
+            .order-check{
+                display: flex;
+               margin: 10px auto;
+               width: 85%;
+               input{
+                margin: 10px 15px;
+
+               }   
+               label{
+                font-size: 12px;
+               }        
+             }
+             .order-submit{
+                text-align: center;
+                padding: 15px 0;
+                button{
+                    padding: 10px 50px;
+                    background-color: $darkPrimaryColor;
+                    color: #fff;
+                    border: none;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+             }
+        }
+       
+
+    }
+}

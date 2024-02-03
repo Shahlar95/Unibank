@@ -1,9 +1,9 @@
 header {
-
-
+  
     .topbar {
         background-color: $mainBackgroundColor;
         display: none;
+        transition: .3s linear;
         @include breakpoint('large'){
             display: block
         }
@@ -267,6 +267,7 @@ header {
                             a{
                                 font-size: 18px;
                                 font-weight: bold;
+                                color: black;
                             }
                         }
                     }
@@ -308,3 +309,5 @@ header {
         }
     }
 }
+
+

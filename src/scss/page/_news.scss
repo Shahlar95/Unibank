@@ -1,0 +1,82 @@
+.news{
+    .container{
+        .news-cards{
+            .add-news{
+                #exampleModal{
+                    .modal-body{
+                        
+
+                        .form{
+                            text-align: left;
+                            .add-news-input{
+                                display: flex;
+                                flex-direction: column;
+                                padding: 10px 0;
+                            }
+
+                        }
+                    }
+                }
+               
+            }
+            #news-page{
+                
+                .inner{
+                    position: relative;
+                    .news-text{
+                        padding-right: 35px;
+                    }
+                    .news-change{
+                        position: absolute;
+                        top: 30px;
+                        right: 20px;
+                        .delete-news{
+                            padding: 10px 15px;
+                            color: red;
+                            background-color: #fff;
+                            margin-bottom: 20px;
+                            border-radius: 5px;
+                            font-size: 20px;
+                            @include center()
+                        }
+                        .update-news{                      
+                        
+                            background-color: #fff;
+                            border-radius: 5px;
+                            font-size: 20px;
+                            color: black;
+                            @include center();
+                            
+                            #exampleModal2{
+                                .modal-body{
+                                    
+            
+                                    .form-update{
+                                        text-align: left;
+                                       
+                                        .add-news-input{
+                                            display: flex;
+                                            flex-direction: column;
+                                            padding: 10px 0;
+                                            label{
+                                            padding: 10px 0;
+                                            font-size: 15px;
+                                            }
+                                        }
+            
+                                    }
+                                }
+                            }
+                            .btn{
+                                i{
+                                    color: green;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

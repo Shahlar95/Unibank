@@ -9,8 +9,12 @@
 
 body{
    
-    color: $primaryColor;
+    color: $secondaryColor;
     font-size: 15px;
+    transition: .3s linear;
+    section{
+      padding: 50px 0;
+    }
     .roboto-thin {
         font-family: "Roboto", sans-serif;
         font-weight: 100;
@@ -92,7 +96,9 @@ h2{
     
 }
        
-   
+  .dark{
+  background-color: black;
+  color: #fff;}
     
 
 
@@ -102,14 +108,18 @@ a{
 }
 
 ul{
+   li{
     list-style: none;
+   }
     margin: 0;
     padding: 0;
 }
-.container{
-  max-width: 1200px;
- 
-}
+
+  .container{
+    max-width: 1200px;
+  
+  }
+
 
 
 button{

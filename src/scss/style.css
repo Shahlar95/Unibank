@@ -6,8 +6,12 @@
 }
 
 body {
-  color: #ff7a00;
+  color: #323232;
   font-size: 15px;
+  transition: 0.3s linear;
+}
+body section {
+  padding: 50px 0;
 }
 body .roboto-thin {
   font-family: "Roboto", sans-serif;
@@ -74,15 +78,22 @@ h2 {
   font-size: 34px;
 }
 
+.dark {
+  background-color: black;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+}
+ul li {
+  list-style: none;
 }
 
 .container {
@@ -96,6 +107,7 @@ button {
 header .topbar {
   background-color: #f5f5f6;
   display: none;
+  transition: 0.3s linear;
 }
 @media (min-width: 992px) {
   header .topbar {
@@ -318,6 +330,7 @@ header .nav .container .nav-menu .menu-services .services li {
 header .nav .container .nav-menu .menu-services .services li a {
   font-size: 18px;
   font-weight: bold;
+  color: black;
 }
 header .nav .container .nav-menu .logo {
   width: 35px;
@@ -359,12 +372,9 @@ header .nav .container .nav-menu .hot-call span {
 
 .container .footer-menu {
   padding-top: 55px;
-  position: relative;
 }
 .container .footer-menu .footer-main-menu {
-  visibility: hidden;
-  position: absolute;
-  left: -1000px;
+  display: none;
 }
 @media (min-width: 992px) {
   .container .footer-menu .footer-main-menu {
@@ -816,8 +826,26 @@ header .nav .container .nav-menu .hot-call span {
 .exchange .container .exchange-info .exchange-money {
   padding: 50px 0;
 }
+.exchange .container .exchange-info .exchange-money .exchange-time {
+  font-size: 13px;
+}
 .exchange .container .exchange-info .exchange-money h2 {
   font-size: 18px;
+}
+.exchange .container .exchange-info .exchange-money .exchange-table .table th {
+  font-weight: normal;
+  font-size: 14px;
+  border-bottom-color: #d6d9db;
+}
+.exchange .container .exchange-info .exchange-money .exchange-table .table td {
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #323232;
+}
+.exchange .container .exchange-info .exchange-money .exchange-table .table td i {
+  font-size: 12px;
+  padding: 0 10px;
 }
 .exchange .container .exchange-info .exchange-calculator {
   background-color: #fff;
@@ -881,12 +909,22 @@ header .nav .container .nav-menu .hot-call span {
   }
 }
 
+.news .container .news-cards .add-news {
+  text-align: right;
+  padding: 15px;
+}
+.news .container .news-cards .add-news i {
+  color: #ff6b00;
+  font-size: 30px;
+  text-align: right;
+}
 .news .container .news-cards .inner {
   background-color: #f5f5f6;
   border-radius: 10px;
   padding: 30px;
   transition: 0.3s linear;
   cursor: pointer;
+  height: 100%;
 }
 .news .container .news-cards .inner .news-header {
   font-size: 16px;
@@ -914,13 +952,21 @@ header .nav .container .nav-menu .hot-call span {
   padding: 30px 0 0;
 }
 .news .container .news-cards .common-news button {
-  font-size: 14px;
   border-radius: 25px;
   background-color: #ff6400;
-  color: #fff;
   padding: 17px 25px;
-  line-height: 16px;
   border: none;
+}
+.news .container .news-cards .common-news button a {
+  font-size: 14px;
+  color: #fff;
+  line-height: 16px;
+  font-weight: bold;
+}
+.news .container .news-cards .common-news .more {
+  font-size: 14px;
+  color: #fff;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -1015,4 +1061,314 @@ header .nav .container .nav-menu .hot-call span {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+}
+
+.news .container .news-cards .add-news #exampleModal .modal-body .form {
+  text-align: left;
+}
+.news .container .news-cards .add-news #exampleModal .modal-body .form .add-news-input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.news .container .news-cards #news-page .inner {
+  position: relative;
+}
+.news .container .news-cards #news-page .inner .news-text {
+  padding-right: 35px;
+}
+.news .container .news-cards #news-page .inner .news-change {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.news .container .news-cards #news-page .inner .news-change .delete-news {
+  padding: 10px 15px;
+  color: red;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news .container .news-cards #news-page .inner .news-change .update-news {
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news .container .news-cards #news-page .inner .news-change .update-news #exampleModal2 .modal-body .form-update {
+  text-align: left;
+}
+.news .container .news-cards #news-page .inner .news-change .update-news #exampleModal2 .modal-body .form-update .add-news-input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.news .container .news-cards #news-page .inner .news-change .update-news #exampleModal2 .modal-body .form-update .add-news-input label {
+  padding: 10px 0;
+  font-size: 15px;
+}
+.news .container .news-cards #news-page .inner .news-change .update-news .btn i {
+  color: green;
+}
+
+.credits .container .credit-head {
+  padding-bottom: 15px;
+}
+.credits .container .credit-head h2 {
+  color: #ff6b00;
+  font-weight: bold;
+}
+.credits .container .credit-information .inner {
+  background-color: #f5f5f6;
+  padding: 30px 60px;
+  border-radius: 10px;
+  height: 100%;
+}
+.credits .container .credit-information .inner .icon {
+  font-size: 50px;
+  color: #ff6b00;
+}
+.credits .container .credit-information .inner h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+.credits .container .credit-information .inner .credit-more {
+  padding: 20px 0;
+}
+.credits .container .credit-information .inner .credit-more .credit-order {
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: #ff6b00;
+  font-weight: bold;
+  color: #fff;
+}
+.credits .container .credit-information .inner .credit-more .credit-order a {
+  color: #fff;
+}
+.credits .container .credit-information .inner .credit-more .credit-order .long-arrow i {
+  padding-left: 20px;
+  font-size: 20px;
+}
+.credits .container .credit-information .inner .credit-more .more-information {
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: 1px solid rgba(128, 128, 128, 0.267);
+  font-weight: bold;
+  margin-left: 10px;
+}
+.credits .container .credit-more-information button {
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: #ff6b00;
+  font-weight: bold;
+  color: #fff;
+}
+.credits .container .credit-more-information button i {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.order {
+  background-color: #f5f5f6;
+}
+.order .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order .container .order-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  min-width: 742px;
+}
+.order .container .order-page .order-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+  width: 100%;
+}
+.order .container .order-page .order-form {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.order .container .order-page .order-form h2 {
+  text-align: center;
+  color: #ff6b00;
+  padding: 30px 0;
+  position: relative;
+}
+.order .container .order-page .order-form h2 .order-border {
+  position: absolute;
+  left: 46%;
+  bottom: 5%;
+  height: 3px;
+  background-color: #ff6b00;
+  width: 7%;
+  text-align: center;
+}
+.order .container .order-page .order-form .credit-order .order-inputs {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  margin: 10px auto;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input {
+  display: flex;
+  overflow: hidden;
+  width: 49%;
+  float: left;
+  margin: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input .order-img {
+  width: 24px;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input .order-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input input {
+  border: none;
+  padding: 0 15px;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input input:focus {
+  outline: none;
+}
+.order .container .order-page .order-form .credit-order .order-inputs #order-porfit {
+  width: 46%;
+}
+.order .container .order-page .order-check {
+  display: flex;
+  margin: 10px auto;
+  width: 85%;
+}
+.order .container .order-page .order-check input {
+  margin: 10px 15px;
+}
+.order .container .order-page .order-check label {
+  font-size: 12px;
+}
+.order .container .order-page .order-submit {
+  text-align: center;
+  padding: 15px 0;
+}
+.order .container .order-page .order-submit button {
+  padding: 10px 50px;
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+body.dark {
+  background-color: black;
+  color: #fff;
+}
+body.dark header .topbar {
+  background-color: black;
+}
+body.dark header .topbar .top-menu li a {
+  color: #fff;
+}
+body.dark header .topbar .top-right .personal,
+body.dark header .topbar .top-right .business {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark header .topbar .top-right .business {
+  color: #fff !important;
+}
+body.dark header .topbar .top-right .dark-mode-icon {
+  background-color: #fff !important;
+  color: black !important;
+}
+body.dark header .topbar .top-right .lang, body.dark header .topbar .top-right .search-icon {
+  background-color: black !important;
+  color: #fff !important;
+}
+body.dark header .nav .menu-services .services li a {
+  color: #fff !important;
+}
+body.dark header .nav .hot-call {
+  border-color: white !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark header .nav .hot-call span {
+  color: #fff !important;
+}
+body.dark main .swiper {
+  background-color: black !important;
+}
+body.dark main .products .inner {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .ucard .ucard-info {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .ucard .ucard-info .personal-cabinet, body.dark main .ucard .ucard-info .partnership {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .ucard-download .ucard-download-info {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .ucard-download .ucard-download-info .ucard-download-store {
+  filter: invert(100%);
+}
+body.dark main .exchange .exchange-info {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .exchange .exchange-info .exchange-calculator {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .exchange .exchange-info .exchange-calculator .calculator-left,
+body.dark main .exchange .exchange-info .exchange-calculator .calculator-right {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .exchange .exchange-info .exchange-calculator .calculator-left input,
+body.dark main .exchange .exchange-info .exchange-calculator .calculator-right input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .exchange .exchange-info .exchange-calculator .calculator-left input select,
+body.dark main .exchange .exchange-info .exchange-calculator .calculator-right input select {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .news .news-cards .inner {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .atm .atm-adress, body.dark main .atm .contact {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .credits .container .credit-information .inner {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .credits .container .credit-information .inner h2 {
+  color: #fff;
+}
+body.dark main .credits .container .credit-information .inner .credit-more .more-information {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.4666666667);
+  color: grey;
+}
+body.dark footer .container .footer-menu .footer-main-menu li a {
+  color: #fff !important;
+}
+body.dark footer .container .footer-menu .footer-main-menu li .footer-submenu li a {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

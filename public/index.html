@@ -35,7 +35,7 @@
                     <div class="top-right">
                         <div class="personal">Fərdi</div>
                         <div class="business">Biznes</div>
-                        <div class="dark-mode-icon"><i class="fa-regular fa-moon"></i></div>
+                        <div class="dark-mode-icon darkmode-toggle"><i class="fa-regular fa-moon"></i></div>
                         <div class="lang">ENG</div>
                         <div class="lang">RUS</div>
                         <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
@@ -79,7 +79,7 @@
   <div class="offcanvas-body">
     <ul class="mobile-services">
         <li><a href="">Kartlar</a></li>
-        <li><a href="">Kreditlər</a></li>
+        <li><a href="./credits.html">Kreditlər</a></li>
         <li><a href="">Əmanətlər</a></li>
         <li><a href="">Köçürmələr</a></li>
         <li><a href="">Onlayn xidmətlər</a></li>
@@ -110,7 +110,7 @@
                     <div class="menu-services">
                         <ul class="services">
                             <li><a href="">Kartlar</a></li>
-                            <li><a href="">Kreditlər</a></li>
+                            <li><a href="./credits.html">Kreditlər</a></li>
                             <li><a href="">Əmanətlər</a></li>
                             <li><a href="">Köçürmələr</a></li>
                             <li><a href="">Onlayn xidmətlər</a></li>
@@ -291,21 +291,54 @@
                                 <h2>Nağd</h2>
                                 <p class="exchange-time">Yeniləndi: </p>
                                 <div class="exchange-table">
-                                    salam
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Valyuta</th>
+                                            <th scope="col">Alış</th>
+                                            <th scope="col">Satış</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="exchange-information">
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <h2>Nağdsız</h2>
                                 <p class="exchange-time">Yeniləndi: </p>
                                 <div class="exchange-table">
-                                    salam
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Valyuta</th>
+                                            <th scope="col">Alış</th>
+                                            <th scope="col">Satış</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="exchange-information">
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <h2>Kart</h2>
                                 <p class="exchange-time">Yeniləndi: </p>
                                 <div class="exchange-table">
-                                    salam
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Valyuta</th>
+                                            <th scope="col">Alış</th>
+                                            <th scope="col">Satış</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="exchange-information">
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -318,18 +351,18 @@
                         </div>
                         <div class="calculator-area">
                             <div class="calculator-left">
-                                <input type="number" placeholder="0">
-                                <select name="" id="">
-                                    <option value="">USD</option>
+                                <input type="number" id="amount-one" placeholder="0" value="1">
+                                <select name="" id="currency-one">
+                                    <option value=""></option>
                                 </select>
                             </div>
                             <div class="calculator-icon">
                                 <i class="fa-solid fa-arrow-right-long"></i>
                             </div>
                             <div class="calculator-right">
-                                <input type="number" placeholder="0">
-                                <select name="" id="">
-                                    <option value="">AZE</option>
+                                <input type="number" id="amount-two" placeholder="0">
+                                <select name="" id="currency-two">
+                                    <option value=""></option>
                                 </select>
                             </div>
                         </div>
@@ -343,30 +376,12 @@
         <section class="news">
             <div class="container">
                 <div class="news-cards">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="inner">
-                                <h3 class="news-header">
-                                    Unibank KB ASC SOC və təhdidlərin aşkarlanması xidmətləri ilə bağlı kotirovka elan
-                                    edir
-                                </h3>
-                                <p class="news-text">Kotirovkada iştirak etmək istəyənlər qiymət təklifini bağlı və möhürlənmiş zərfdə,
-                                    kotirovka komissiyasının sədri Tural Həsənovun adına göndərməlidirlər.
-                                    Zərflərin qəbulu üçün son tarix 23.01.2024-cü il, saat 12.00-dır.
-                                    Zərfdə kotirovka komissiyasının sədrini qeyd etməyiniz xahiş olunur.
-                                    Ünvan: R.Behbudov 55, Unibankın Baş ofisi.
-                                    Qeyd: Kotirovkada qalib gələn şirkət həmin alqı–satqı ilə bağlı “Unibank” KB ASC-də
-                                    hesab açmalıdır.
-                                    Texniki şərtlər: əlavədədir
-                                    Kotirovkanın şərtləri ilə bağlı hansısa sualınız yaranarsa,
-                                    Uzeyir.Huseynov@unibank.az ünvanına müraciət edə bilərsiniz.
-                                </p>
-                                <p class="news-date">16.01.2024</p>
-                            </div>
-                        </div>
-                        <div class="common-news">
-                            <button>Bütün xəbərlər</button>
-                        </div>
+                    <div id="cards" class="row">
+                        
+                        
+                    </div>
+                    <div class="common-news">
+                        <button><a href="./news.html">Bütün xəbərlər</a></button>
                     </div>
                 </div>
             </div>
@@ -496,6 +511,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

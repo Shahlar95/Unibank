@@ -1,110 +1,108 @@
 
-.container{
-    .footer-menu{
-        padding-top: 55px;
-        position: relative;
-        .footer-main-menu{
-           
-            visibility: hidden;
-            position: absolute;
-            left: -1000px;
+    .container{
+        .footer-menu{
+            padding-top: 55px;
+            
+            .footer-main-menu{
 
-            @include breakpoint('large'){
-            @include flex($just:space-between);
-            flex-wrap: wrap;
-            visibility: visible;
-            position: static;
-            left: auto;
-            }
-            li{
-                a{
-                    font-weight: bold;
-                    font-size: 15px;
-                    cursor: pointer;
-                }
-                .footer-submenu{
-                    padding-top: 17px;
-                    li{
-                        a{
-                            font-size: 12px;
-                            line-height: 35px;
-                            font-weight: normal;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
-        .footer-smm{
-            @include flex($just:space-around,$align:center);
-            padding: 50px 0 0px;
-            @include breakpoint('large'){
-            @include flex($just:space-between,$align:center);
-
-            }
-            .smm-icon{
-                display: flex;
-                text-align: center;
-                li{
-                        margin: 0 10px;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
-                        background-color: grey;
-                        @include center();
-                        a{
-                            color: #fff;
-                            font-size: 12px;
-                        }
-                    
-                }
-                li:nth-child(1),li:nth-child(2){
-                    background-color: $darkPrimaryColor;
-                }
-            }
-            .unibank-politics{
-
-                text-align: center;
-                margin-bottom: 0;
-            }
-        }
-        .footer-more{
-            @include flex($just:space-between,$align:center);
-            flex-direction: column-reverse;
-            padding: 30px 0;
-            @include breakpoint('large'){
-            @include flex($just:space-between,$align:center);
-            flex-direction: row;
-
-            }
-            .footer-liscense{
-                padding-top: 25px;
+                display: none;
+                
                 @include breakpoint('large'){
-                padding-top: 0px;
-
+                @include flex($just:space-between);
+                flex-wrap: wrap;
+                visibility: visible;
+                position: static;
+                left: auto;
                 }
-                h4,p{
-                    font-size: 12px;
-                    text-align: center;
-                    
-                    @include breakpoint('large'){
-                        text-align: left;
+                li{
+                    a{
+                        font-weight: bold;
+                        font-size: 15px;
+                        cursor: pointer;
+                    }
+                    .footer-submenu{
+                        padding-top: 17px;
+                        li{
+                            a{
+                                font-size: 12px;
+                                line-height: 35px;
+                                font-weight: normal;
+                                cursor: pointer;
+                            }
+                        }
                     }
                 }
             }
-            .footer-image{
-                display: flex;
-                div{
-                    overflow: hidden;
-                    margin:  0 20px;
-                    width: 60px;
-                    height: 45px;
-                    img{
-                       width: 100%;
-                       object-fit: cover;
+            .footer-smm{
+                @include flex($just:space-around,$align:center);
+                padding: 50px 0 0px;
+                @include breakpoint('large'){
+                @include flex($just:space-between,$align:center);
+
+                }
+                .smm-icon{
+                    display: flex;
+                    text-align: center;
+                    li{
+                            margin: 0 10px;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background-color: grey;
+                            @include center();
+                            a{
+                                color: #fff;
+                                font-size: 12px;
+                            }
+                        
+                    }
+                    li:nth-child(1),li:nth-child(2){
+                        background-color: $darkPrimaryColor;
+                    }
+                }
+                .unibank-politics{
+
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+            .footer-more{
+                @include flex($just:space-between,$align:center);
+                flex-direction: column-reverse;
+                padding: 30px 0;
+                @include breakpoint('large'){
+                @include flex($just:space-between,$align:center);
+                flex-direction: row;
+
+                }
+                .footer-liscense{
+                    padding-top: 25px;
+                    @include breakpoint('large'){
+                    padding-top: 0px;
+
+                    }
+                    h4,p{
+                        font-size: 12px;
+                        text-align: center;
+                        
+                        @include breakpoint('large'){
+                            text-align: left;
+                        }
+                    }
+                }
+                .footer-image{
+                    display: flex;
+                    div{
+                        overflow: hidden;
+                        margin:  0 20px;
+                        width: 60px;
+                        height: 45px;
+                        img{
+                           width: 100%;
+                           object-fit: cover;
+                        }
                     }
                 }
             }
         }
     }
-}

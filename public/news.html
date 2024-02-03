@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unibank</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../src/scss/style.css">
+    </head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="container">
+                <div class="top-div">
+                    <div class="top-left">
+                        <div class="logo">
+                            <img src="https://unibank.az/assets/images/logonew-orange1.png" alt="logo">
+                        </div>
+                        <div>
+                            <ul class="top-menu">
+                                <li><a href="">Xidmət şəbəkəsi</a></li>
+                                <li><a href="">Bank haqqında</a></li>
+                                <li><a href="">Keşbek</a></li>
+                                <li><a href="">Tariflər</a></li>
+                                <li><a href="">İnsan Resursları</a></li>
+                                <li><a href="">Bankla əlaqə və təkliflər</a></li>
+                                <li><a href="">F.A.Q</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <div class="personal">Fərdi</div>
+                        <div class="business">Biznes</div>
+                        <div class="dark-mode-icon darkmode-toggle"><i class="fa-regular fa-moon"></i></div>
+                        <div class="lang">ENG</div>
+                        <div class="lang">RUS</div>
+                        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-topbar">
+            <div class="container">
+               <div class="mobile-topbar-menu">
+                <div class="mobile-customer">
+                    <div class="personal">Fərdi</div>
+                    <div class="business">Biznes</div>
+                </div>
+               
+                <div class="mobile-topbar-icon">
+                    <select name="" id="">
+                        <option value="">AZE</option>
+                        <option value="">ENG</option>
+                        <option value="">RUS</option>
+                    </select>
+                    <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+               </div>
+
+            </div>
+        </div>
+        <div class="nav">
+            <div class="container">
+                <div class="nav-menu">
+                    <div class="mobile-menu">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <div class="mobile-menu-bar"><i class="fa-solid fa-bars-staggered"></i></div>
+                        </button>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTopLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="mobile-services">
+        <li><a href="">Kartlar</a></li>
+        <li><a href="">Kreditlər</a></li>
+        <li><a href="">Əmanətlər</a></li>
+        <li><a href="">Köçürmələr</a></li>
+        <li><a href="">Onlayn xidmətlər</a></li>
+        <li><a href="">Əlavə xidmətlər</a></li>
+    </ul>
+    <ul class="mobile-top-menu">
+        <li><a href="">Xidmət şəbəkəsi</a></li>
+        <li><a href="">Bank haqqında</a></li>
+        <li><a href="">Keşbek</a></li>
+        <li><a href="">Tariflər</a></li>
+        <li><a href="">İnsan Resursları</a></li>
+        <li><a href="">Bankla əlaqə və təkliflər</a></li>
+        <li><a href="">F.A.Q</a></li>
+    </ul>
+    <div class="mobile-top-right">
+        <div class="dark-mode-icon"><i class="fa-regular fa-moon"></i></div>
+        <div class="lang">ENG</div>
+        <div class="lang">RUS</div>
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+  </div>
+</div>
+
+                    </div>
+                    <div class="logo">
+                        <img src="https://unibank.az/assets/images/logonew-orange1.png" alt="logo">
+                    </div>
+                    <div class="menu-services">
+                        <ul class="services">
+                            <li><a href="">Kartlar</a></li>
+                            <li><a href="">Kreditlər</a></li>
+                            <li><a href="">Əmanətlər</a></li>
+                            <li><a href="">Köçürmələr</a></li>
+                            <li><a href="">Onlayn xidmətlər</a></li>
+                            <li><a href="">Əlavə xidmətlər</a></li>
+                        </ul>
+                    </div>
+                    <div class="hot-call">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>117</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+        <section class="news">
+            <div class="container">
+                <div class="news-cards">
+                    <div class="add-news">
+                        
+                        
+<!-- Button trigger modal -->
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-circle-plus"></i>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Yeni xəbər əlavə et</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="form" id="news-form">
+                <div class="add-news-input">
+                    <label for="news-title">Xəbərin başlığı</label>
+                    <input type="text" placeholder="başlıq" id="news-title">
+                </div>
+                <div class="add-news-input">
+                    <label for="news-body">Xəbərin mətni</label>
+                    <input type="text" placeholder="mətn" id="news-body">
+                </div>
+                <div class="add-news-input">
+                    <label for="news-date">Xəbərin tarixi</label>
+                    <input type="date" placeholder="tarix" id="news-date">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+                    </div>
+                    <div id="news-page" class="row gy-3">
+                        
+                       
+                    </div>
+                    <div class="common-news">
+                        <button class="more">Daha çox</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                
+                    <ul class="footer-main-menu">
+                        <li><a href="">Kartlar</a>
+                        <ul class="footer-submenu">
+                            <li><a href="">Kartlar</a></li>
+                            <li><a href="">Debet kartlar</a></li>
+                            <li><a href="">Digər</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="">Kreditlər</a>
+                            <ul class="footer-submenu">
+                                <li><a href="">Nağd</a></li>
+                                <li><a href="">Mikro</a></li>
+                                <li><a href="">İpoteka</a></li>
+                                <li><a href="">Kredit xətti</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Əmanətlər</a>
+                            <ul class="footer-submenu">
+                                <li><a href="">Müddətli</a></li>
+                                <li><a href="">Proqressiv</a></li>
+                                <li><a href="">Yığım</a></li>
+                                <li><a href="">Topla</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Köçürmələr</a>
+                            <ul class="footer-submenu">
+                                <li><a href="">Ölkəxarici</a></li>
+                                <li><a href="">Ölkədaxili</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Onlayn xidmətlər</a>
+                            <ul class="footer-submenu">
+                                <li><a href="">UBank</a></li>
+                                <li><a href="">Şəxsi kabinet</a></li>
+                                <li><a href="">Unimiles şəxsi kabinet</a></li>
+                                <li><a href="">Onlayn kredit ödənişi</a></li>
+                                <li><a href="">Onlayn kredit müraciəti</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Əlavə xidmətlər</a>
+                            <ul class="footer-submenu">
+                                <li><a href="">Hesablaşma-kassa xidməti</a></li>
+                                <li><a href="">Depozit qutuları</a></li>
+                                <li><a href="">Onlayn ticarət (e-commerce)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Bank haqqında</a>
+                            <ul class="footer-submenu">
+                                <li><a href="">Rəhbərlik</a></li>
+                                <li><a href="">Müxbir hesablar</a></li>
+                                <li><a href="">Təklif və Şikayətlər</a></li>
+                                <li><a href="">İnsan resursları</a></li>
+                                <li><a href="">Hesabatlar</a></li>
+                                <li><a href="">Digər sənədlər</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="footer-smm">
+                        <ul class="smm-icon">
+                            <li><a href=""><i class="fa-brands fa-apple"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-android"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-telegram"></i></a></li>
+
+                        </ul>
+                        <p class="unibank-politics">Məxfilik siyasəti</p>
+                    </div>
+                    <hr>
+                    <div class="footer-more">
+                        <div class="footer-liscense">
+                            <h4>© 2024, Unibank - Sənin Bankın</h4>
+                            <p>Unibank Azərbaycan Respublikası Mərkəzi Bankının 73 saylı 14 dekabr 2010-cu il tarixli lisenziyası əsasında fəaliyyət göstərir.
+                                Bütün hüquqlar qorunur.</p>
+                        </div>
+                        <div class="footer-image">
+                          <div> <img src="https://unibank.az/assets/images/adif.png" alt="image"></div>
+                           <div><img src="https://avciya.az/wp-content/uploads/2021/02/Elektron-hokumet-1-650x399.jpg" alt="image"></div>
+                           <div><img src="https://unibank.az/assets/images/infobank.png?v4" alt="image"></div>
+                           <div><img src="https://unibank.az/assets/images/msp.png?v5" alt="image"></div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d01214c8d1.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../src/js/news.js"></script>
+</body>
+</html>
