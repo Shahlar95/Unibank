@@ -1,15 +1,252 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title" },
-      { "id": "2", "title": "another title" }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "currency": [
+    {
+      "id": "1",
+      "title": "USD",
+      "buy": "1.6970",
+      "sell": "1.7025"
+    },
+    {
+      "id": "2",
+      "title": "EUR",
+      "buy": "1.8178",
+      "sell": "1.8703"
+    },
+    {
+      "id": "3",
+      "title": "RUB",
+      "buy": "0.0156",
+      "sell": "0.0192"
+    },
+    {
+      "id": "4",
+      "title": "GBP",
+      "buy": "2.1271",
+      "sell": "2.1854"
     }
-  }
-
-  
+  ],
+  "calculator": [
+    {
+      "basic": "AZE",
+      "quotes": {
+        "AZEUSD": "0.5893",
+        "AZEEUR": "0.5501",
+        "AZERUB": "64.1026",
+        "AZEGBP": "0.4701"
+      },
+      "id": "9349"
+    }
+  ],
+  "rates": [
+    {
+      "time_last_update_utc": "Thu, 08 Feb 2024 00:00:01 +0000",
+      "time_next_update_utc": "Fri, 09 Feb 2024 00:00:01 +0000",
+      "base_code": "USD",
+      "conversion_rates": {
+        "USD": 1,
+        "AZN": 1.697,
+        "RUB": 90.266,
+        "EUR": 0.9143,
+        "GDP": 0.7811
+      },
+      "id": "42f7"
+    }
+  ],
+  "news": [
+    {
+      "id": "088d",
+      "title": "Unibank KB ASC SOC və təhdidlərin aşkarlanması xidmətləri ilə bağlı kotirovka elan edir",
+      "body": "Kotirovkada iştirak etmək istəyənlər qiymət təklifini bağlı və möhürlənmiş zərfdə, kotirovka komissiyasının sədri Tural Həsənovun adına göndərməlidirlər.  Zərflərin qəbulu üçün son tarix 23.01.2024-cü il, saat 12.00-dır.",
+      "date": "2024-01-16"
+    },
+    {
+      "id": "32e0",
+      "title": "Unibank KB ASC Qualys lisenziyasının uzadılması ilə bağlı kotirovka elan edir",
+      "body": "Kotirovkada iştirak etmək istəyənlər qiymət təklifini bağlı və möhürlənmiş zərfdə, kotirovka komissiyasının sədri Tural Həsənovun adına göndərməlidirlər.  Zərflərin qəbulu üçün son tarix 19.01.2024-cü il, saat 12.00-dır.",
+      "date": "2024-12-01"
+    },
+    {
+      "id": "f9f0",
+      "title": "Unibankın investisiyaları nəticə verdi: Əməliyyat mənfəəti 3 dəfə artdı!",
+      "body": "“Unibank” KB ASC 2023-cü ilin əsas maliyyə nəticələrini açıqlayıb. Hesabat dövründə cəmi gəlirlər 37 % artaraq, 319milyon manata çatıb. Bankın gəlirlərindəki yüksəlmə qarşılığında il ərzində bankın xərclərində artım cəmi 15 % olub.    Nəticədə 31 dekabr 2023-cü il tarixinə Bankın əməliyyat mənfəəti əvvəlki ilin uyğun dövrü ilə müqayisədə 3 dəfə artaraq, 75 milyon manata çatıb. Bank hesabat ilini 33 milyon manatlıq xalis mənfəətlə başa vurub.    Eyni zamanda 2023-ci ildə qazanılmış faiz gəlirləri 212 milyon manata çatıb, qeyri-faiz gəlirləri isə 107 milyon manatı ötüb. Bununla da Bankın qeyri-faiz gəlirləri əvvəlki illə müqayisədə 54 %, faiz gəlirləri isə 37 % artıb.  ",
+      "date": "2024-12-01"
+    },
+    {
+      "id": "e085",
+      "title": "Unibank müştəriləri pulu necə və harada yığır?",
+      "body": "Bir ildən çoxdur ki müştərilərin istifadəsinə verilən “Unibank”ın “Topla” rəqəmsal məhsulu minlərlə bank müştərisini hədəfinə çatdırıb. UBank mobil əlavəsində “Topla” rəqəmsal məhsulunda pul toplamaq üçün onlayn depozit hesabı açanlar maraqlı hədəflər seçiblər.  İndiyədək “Topla” yaradan Unibank müştəriləri özlərinə 100 minə yaxın hədəf müəyyən edib. Bu müddətdə hədəfinə çatanlar yığdıqları vəsaitlə istəklərini reallaşdırıblar.",
+      "date": "2023-12-20"
+    },
+    {
+      "id": "6f84",
+      "title": "Kommunal ödənişlərinizi Unibank mobil tətbiqində edin və qazanın!",
+      "body": "Havalar soyuduqca artan kommunal ödənişlərinizi çox sərfəli və rahat şəkildə ödəyə bilərsiniz. Unibank kartları dekabr ayı ərzində işıq, qaz, su və istilik ödənişlərinə 2% keşbek  verir. İndi UBank mobil tətbiqindən Unibank kartı ilə ödədiyiniz bu kommunal ödənişlərin məbləğinin 2%-i kartınıza qayıdacaq.",
+      "date": "2023-12-01"
+    }
+  ],
+  "order": [
+    {
+      "id": "1",
+      "name": "Memmed Memmedov Memmed",
+      "pinkod": "3b0sfl8",
+      "mobile": "0554223849",
+      "work": "BDC",
+      "revenue": "1500"
+    },
+    {
+      "id": "9b18",
+      "name": "Aydin",
+      "pinkod": "60q8tdf",
+      "mobile": "994553332211",
+      "work": "Kapital bank",
+      "revenue": "15000"
+    },
+    {
+      "id": "c6e0",
+      "name": "sasas",
+      "pinkod": "sasa",
+      "mobile": "251515156",
+      "work": "qdqdqwdqw",
+      "revenue": "12334"
+    },
+    {
+      "id": "7af6",
+      "name": "Turxan",
+      "pinkod": "5kr5v",
+      "mobile": "0507250006",
+      "work": "Issiz",
+      "revenue": "100"
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "1",
+      "imgUrl": "https://unibank.az/uploads/items/4964-wt.png",
+      "name": "World Telecom",
+      "category": "Texnika və Kompüterlər",
+      "kredit": [
+        "1ay",
+        "3ay",
+        "6ay",
+        "12ay",
+        "18ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    },
+    {
+      "id": "2",
+      "imgUrl": "https://unibank.az/uploads/items/imp-3Zcn6NEW5JJNU4DGn4cpuhEE5ZnPsY.png",
+      "name": "İrşad",
+      "category": "Texnika və Kompüterlər",
+      "kredit": [
+        "3ay",
+        "6ay",
+        "12ay",
+        "18ay"
+      ],
+      "cashback": "true",
+      "cashbackPercent": "3%"
+    },
+    {
+      "id": "3",
+      "imgUrl": "https://unibank.az/uploads/items/8059-tommy.png",
+      "name": "Tommy Hilfiger",
+      "category": "Geyim",
+      "kredit": [
+        "3ay",
+        "6ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    },
+    {
+      "id": "4",
+      "imgUrl": "https://unibank.az/uploads/items/6790-Baku-electronics-logo.png",
+      "name": "Baku Electronics",
+      "category": "Texnika və Kompüterlər",
+      "kredit": [
+        "3ay",
+        "6ay",
+        "12ay",
+        "18ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    },
+    {
+      "id": "5",
+      "imgUrl": "https://unibank.az/uploads/items/3377-Accessorize.png",
+      "name": "Accessorize",
+      "category": "Aksessuarlar",
+      "kredit": [
+        "3ay",
+        "6ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "4%"
+    },
+    {
+      "id": "6",
+      "imgUrl": "https://unibank.az/uploads/items/452-adidas.png",
+      "name": "Adidas",
+      "category": "İdman malları",
+      "kredit": [
+        "3ay",
+        "6ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    },
+    {
+      "id": "7",
+      "imgUrl": "https://unibank.az/uploads/items/5913-texnomart.png",
+      "name": "Texnomart",
+      "category": "Texnika və Kompüterlər",
+      "kredit": [
+        "1ay",
+        "3ay",
+        "6ay",
+        "12ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    },
+    {
+      "id": "8",
+      "imgUrl": "https://unibank.az/uploads/items/9809-beatrice.png",
+      "name": "Beatrice",
+      "category": "Kosmetika",
+      "kredit": [
+        "1ay",
+        "3ay",
+        "6ay"
+      ],
+      "cashback": "true",
+      "cashbackPercent": "5%"
+    },
+    {
+      "id": "9",
+      "imgUrl": "https://unibank.az/uploads/items/6666-camelactive.png",
+      "name": "Camel Active",
+      "category": "Ayyaqabı Mağazaları",
+      "kredit": [
+        "3ay",
+        "6ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    },
+    {
+      "id": "10",
+      "imgUrl": "https://unibank.az/uploads/items/5026-unisa.png",
+      "name": "UNİSA",
+      "category": "Ayyaqabı Mağazaları",
+      "kredit": [
+        "3ay"
+      ],
+      "cashback": "false",
+      "cashbackPercent": "0"
+    }
+  ]
+}

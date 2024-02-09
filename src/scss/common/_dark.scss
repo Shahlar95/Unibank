@@ -1,0 +1,295 @@
+body{
+    &.dark{
+        background-color: black;
+        color: #fff;
+       header{
+        .topbar{
+        background-color: black;
+        .top-menu{
+  
+          li{
+            a{
+              color: #fff;
+            }
+          }
+        }
+        .top-right{
+          .personal,
+          .business{
+  
+            background-color: rgba(255,255,255,.1) !important;
+          }
+          .business{
+            color: #fff !important;
+          }
+          .dark-mode-icon{
+            background-color: #fff !important;
+            color: black !important;
+          }
+          .lang,.search-icon{
+            background-color: rgba(255,255,255,.1) !important;
+            color: #fff !important;
+          }
+  
+        }
+        }
+        .mobile-topbar{
+        background-color: black;
+
+         
+        }
+        .nav{
+          .menu-services{
+            .services{
+              li{
+                a{
+                  color: #fff !important;
+                }
+              }
+            }
+           
+          }
+          .hot-call{
+            border-color: #ffff !important;
+            background-color: rgba(255,255,255,.1) !important;
+            span{
+              color: #fff !important;
+            }
+          }
+          .nav-menu{
+            .mobile-menu{
+              .mobile-menu-bar{
+                
+                background-color: rgba(255,255,255,.1) !important;
+                color: #fff;
+              }
+              #offcanvasTop{
+                background-color: black;
+                .btn-mobile-close{
+                  color: #fff !important;
+                  font-weight: bold;
+                  background-color: rgba(255,255,255,.1) !important;
+                  padding: 5px 10px;
+                  border: none;
+                }
+                .offcanvas-body{
+                  .mobile-services,.mobile-top-menu{
+                    li{
+                      a{
+                  color: #fff !important;
+                        
+                      }
+                    }
+                  }
+                  .mobile-top-right{
+                    .personal,
+                    .business{
+            
+                      background-color: rgba(255,255,255,.1) !important;
+                    }
+                    .business{
+                      color: #fff !important;
+                    }
+                    .dark-mode-icon{
+                      background-color: #fff !important;
+                      color: black !important;
+                    }
+                    .lang,.search-icon{
+                      background-color: rgba(255,255,255,.1) !important;
+                      color: #fff !important;
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+       }
+       main{
+        .swiper{
+          background-color: black !important;
+        }
+        .products{
+          .inner{
+            background-color: rgba(255,255,255,.1) !important;
+          }
+        }
+        .ucard{
+          .ucard-info{
+            background-color: rgba(255,255,255,.1) !important;
+            .personal-cabinet,.partnership{
+            background-color: rgba(255,255,255,.1) !important;
+  
+            }
+          }
+        }
+        .ucard-download{
+          .ucard-download-info{
+            background-color: rgba(255,255,255,.1) !important;
+            .ucard-download-store{
+              filter: invert(100%);
+            }
+          }
+        }
+        .exchange {
+          .exchange-info {
+            background-color: rgba(255,255,255,.1) !important;
+            .exchange-calculator{
+            background-color: rgba(255,255,255,.1) !important;
+            color: #fff;
+            .calculator-left,
+            .calculator-right {
+            background-color: rgba(255,255,255,.1) !important;
+            color: #fff;
+              input{
+            background-color: rgba(255,255,255,.1) !important;
+            color: #fff;
+
+                select{
+              background-color: rgba(255,255,255,.1) !important;
+  
+                }
+               
+              }
+            }
+            }
+            .exchange-table{
+              color: #fff;
+              .table{
+                th{
+                  color: #fff;
+                }
+                td{
+                  color: #fff !important;
+                }
+              }
+            }
+          }
+        }
+        .news{
+          .news-cards{
+            .inner{
+            background-color: rgba(255,255,255,.1) !important;
+  
+            }
+          }
+        }
+        .atm{
+          .atm-adress,.contact{
+            background-color: rgba(255,255,255,.1) !important;
+  
+          }
+        }
+        .credits{
+          .container{
+            .credit-information{
+              .inner{
+                background-color: rgba(255,255,255,.1) !important;
+                h2{
+                  color: #fff;
+                }
+                .credit-more{
+                  
+                  .more-information{
+                background-color: rgba(255,255,255,.1) !important;
+                    border-color: #ffffff77;
+                    color: grey;
+                  } 
+                }
+              }
+            }
+          }
+        }
+        .order-table{
+          .container{
+            table{
+              color: #fff;
+            }
+          }
+        }
+        .partnership{
+          .container{
+            .companies{
+              .companies-category{
+                background-color: rgba(255,255,255,.1);
+                #category-names{
+                background-color: rgba(255,255,255,.1);
+
+                }
+                .filter{
+                background-color: rgba(255,255,255,.1);
+                
+                }
+                .filter::placeholder{
+                  color: #ffffffbb;
+                }
+              }
+              #companies-cards{
+                .partner-card{
+                  .inner{
+                background-color: rgba(255,255,255,.1);
+                    .img{
+                      filter: invert(1) grayscale(1);
+                    }
+                    .company-name{
+                      color: #fff;
+                    }
+                    .company-category{
+                  color: #fff;
+
+                    }
+                    .credit-months{
+                      .month-text{
+                        background-color: black;
+                        border: 1px solid rgba(255, 255, 255, 0.301);
+                       
+                        .month-numb{
+                          color: #fff;
+                        }
+                      }
+                    }
+                    .cashback{
+                      .cashback-border{
+                        background-color: rgba(255, 255, 255, 0.301);
+
+                        p{
+                          background-color: black;
+                           padding: 0 5px;
+
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+       }
+       footer{
+        .container{
+                  
+                  .footer-menu{
+                    .footer-main-menu{
+                      li{
+                      
+        
+                        a{
+                          color: #fff !important;
+                        }
+                        .footer-submenu{
+                          li{
+                            a{
+                              color: #fff;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                }
+      }
+}

@@ -3,15 +3,31 @@
         .news-cards{
             .add-news{
                 #exampleModal{
+                    .modal-header{
+                        #exampleModalLabel{
+                            color:black;
+                        }
+                    }
+                    
                     .modal-body{
                         
 
                         .form{
                             text-align: left;
+                            color: black;
                             .add-news-input{
                                 display: flex;
                                 flex-direction: column;
                                 padding: 10px 0;
+                                input{
+                                    &.empty{
+                                        border: 2px solid red;
+                                    }
+                                    
+                                }
+                                input:focus{
+                                    outline: none;
+                                }
                             }
 
                         }

@@ -32,46 +32,54 @@
                         <form class="credit-order">
                            <div class="order-inputs"> 
                             <div class="order-input">
+                                <span class="input-required">*</span>
                                <div class="order-img">
                                 <img src="https://onlineservices.unibank.az/OnlineLoanOffer/javax.faces.resource/account.png.jsp?ln=imgs/icons" alt="image">
                                </div>
-                                <input type="text" placeholder="Ad,Soyad,Atasının adı">
+                                <input type="text" class="fullname" min="2" placeholder="Ad,Soyad,Atasının adı" required>
                             </div>
                             <div  class="order-input">
+                                <span class="input-required">*</span>
                                 <div class="order-img">
                                     <img src="https://onlineservices.unibank.az/OnlineLoanOffer/javax.faces.resource/id-card.svg.jsp?ln=imgs/icons" alt="image">
                                 </div>
-                                <input type="text" placeholder="Fin kod">
+                                <input type="text" class="pinkod" placeholder="Fin kod" required min="7" max="7">
                             </div>    
                         </div>
                         <div class="order-inputs">
+                            
                            <div class="order-input">
+                            <span class="input-required">*</span>
                             <div class="order-img"><img src="https://onlineservices.unibank.az/OnlineLoanOffer/javax.faces.resource/cellphone.png.jsp?ln=imgs/icons" alt="image"></div>
-                             <input type="number" placeholder="Mobil telefon (994XXXXXXXXX)">
+                             <input type="number" class="mobil-number" maxlength="12" placeholder="Mobil telefon (994XXXXXXXXX)" required>
                         </div>
                         <div class="order-input">
+                            <span class="input-required">*</span>
                             <div class="order-img">
                                 <img src="https://onlineservices.unibank.az/OnlineLoanOffer/javax.faces.resource/workplace.png.jsp?ln=imgs/icons" alt="image">
                             </div>
-                            <input type="text" placeholder="İş yeri">
+                            <input type="text" class="work" placeholder="İş yeri" required>
                         </div>
                        
                         </div>
                         <div class="order-inputs">
-                            <div id="order-porfit" class="order-input"> 
+                            <div id="order-profit" class="order-input"> 
+                                <span class="input-required">*</span>
                                 <div class="order-img">
                                     <img src="https://onlineservices.unibank.az/OnlineLoanOffer/javax.faces.resource/keyboard-backspace.png.jsp?ln=imgs/icons" alt="image">
                                 </div>
-                                <input type="number" placeholder="Rəsmi gəlir">
+                                <input type="number" class="profit" placeholder="Rəsmi gəlir" required>
                             </div>
                         </div>
                       <div class="order-check">
-                          <input type="checkbox" name="" id="order-legal">
-                        <label class="form-check-label" for="order-legal">Məlumatlarımın doğruluğunu təsdiq edir, kredit öhdəliklərim barədə məlumatları AKB kredit reyestrindən , şəxsi və iş yerim üzrə məlumatları isə ”ASAN Finans” sistemi vasitəsilə əldə edilməsinə icazə verirəm.</label>
-                      
+                        
+                          <input type="checkbox" name="" id="order-legal" required>
+                        <label class="form-check-label" for="order-legal">Məlumatlarımın doğruluğunu təsdiq edir, kredit öhdəliklərim barədə məlumatları AKB kredit reyestrindən , şəxsi və iş yerim üzrə məlumatları isə ”ASAN Finans” sistemi vasitəsilə əldə edilməsinə icazə verirəm. <span class="input-required">*</span></label>
+                       
                       </div>
                            <div class="order-submit">
-                             <button type="submit" class="btn btn-primary">Sifariş et</button>
+                            
+                             <button type="submit"  class="order-submit-btn">Sifariş et</button>
                         </div>
                           </form>
                     </div>

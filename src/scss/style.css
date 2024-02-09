@@ -256,6 +256,11 @@ header .nav .container .nav-menu .mobile-menu {
     display: none;
   }
 }
+header .nav .container .nav-menu .mobile-menu .btn-mobile-close {
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+}
 header .nav .container .nav-menu .mobile-menu button {
   padding: 0;
   margin: 0;
@@ -719,6 +724,9 @@ header .nav .container .nav-menu .hot-call span {
 .ucard .container .ucard-info .ucard-content .ucard-btn .partner-personal .partnership {
   width: 50%;
 }
+.ucard .container .ucard-info .ucard-content .ucard-btn .partner-personal .partnership a {
+  color: #545454;
+}
 @media (min-width: 992px) {
   .ucard .container .ucard-info .ucard-content .ucard-btn .partner-personal .partnership {
     width: auto;
@@ -884,6 +892,8 @@ header .nav .container .nav-menu .hot-call span {
   border: 1px solid rgba(50, 50, 50, 0.1);
   border-radius: 5px;
   width: 280px;
+  display: flex;
+  justify-content: space-between;
 }
 .exchange .container .exchange-info .exchange-calculator .calculator-area .calculator-left input,
 .exchange .container .exchange-info .exchange-calculator .calculator-area .calculator-right input {
@@ -907,6 +917,26 @@ header .nav .container .nav-menu .hot-call span {
   .exchange .container .exchange-info .exchange-calculator .calculator-area .calculator-icon {
     visibility: visible;
   }
+}
+.exchange .container .exchange-info .exchange-calculator .calculator-area #convert {
+  border: none;
+  padding: 20px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+}
+.exchange .container .exchange-info .exchange-results {
+  text-align: center;
+}
+.exchange .container .exchange-info .exchange-results h2 {
+  text-align: center;
+}
+.exchange .container .exchange-info .exchange-results h3 {
+  text-align: center;
+  color: #ff6b00;
+  font-weight: bold;
 }
 
 .news .container .news-cards .add-news {
@@ -962,6 +992,8 @@ header .nav .container .nav-menu .hot-call span {
   color: #fff;
   line-height: 16px;
   font-weight: bold;
+  width: 100%;
+  height: 100%;
 }
 .news .container .news-cards .common-news .more {
   font-size: 14px;
@@ -1063,13 +1095,23 @@ header .nav .container .nav-menu .hot-call span {
   cursor: pointer;
 }
 
+.news .container .news-cards .add-news #exampleModal .modal-header #exampleModalLabel {
+  color: black;
+}
 .news .container .news-cards .add-news #exampleModal .modal-body .form {
   text-align: left;
+  color: black;
 }
 .news .container .news-cards .add-news #exampleModal .modal-body .form .add-news-input {
   display: flex;
   flex-direction: column;
   padding: 10px 0;
+}
+.news .container .news-cards .add-news #exampleModal .modal-body .form .add-news-input input.empty {
+  border: 2px solid red;
+}
+.news .container .news-cards .add-news #exampleModal .modal-body .form .add-news-input input:focus {
+  outline: none;
 }
 .news .container .news-cards #news-page .inner {
   position: relative;
@@ -1191,8 +1233,12 @@ header .nav .container .nav-menu .hot-call span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 800px;
-  min-width: 742px;
+}
+@media (min-width: 992px) {
+  .order .container .order-page {
+    max-width: 800px;
+    min-width: 742px;
+  }
 }
 .order .container .order-page .order-head {
   display: flex;
@@ -1221,19 +1267,37 @@ header .nav .container .nav-menu .hot-call span {
 }
 .order .container .order-page .order-form .credit-order .order-inputs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 85%;
   margin: 10px auto;
+}
+@media (min-width: 992px) {
+  .order .container .order-page .order-form .credit-order .order-inputs {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .order .container .order-page .order-form .credit-order .order-inputs .order-input {
   display: flex;
   overflow: hidden;
-  width: 49%;
+  width: 100%;
   float: left;
   margin: 10px 15px;
   border: 1px solid rgba(0, 0, 0, 0.267);
   padding: 15px 10px;
   border-radius: 5px;
+  position: relative;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input.empty {
+  border: 2px solid red;
+}
+.order .container .order-page .order-form .credit-order .order-inputs .order-input.valid {
+  border: none;
+}
+@media (min-width: 992px) {
+  .order .container .order-page .order-form .credit-order .order-inputs .order-input {
+    width: 49%;
+  }
 }
 .order .container .order-page .order-form .credit-order .order-inputs .order-input .order-img {
   width: 24px;
@@ -1251,8 +1315,21 @@ header .nav .container .nav-menu .hot-call span {
 .order .container .order-page .order-form .credit-order .order-inputs .order-input input:focus {
   outline: none;
 }
-.order .container .order-page .order-form .credit-order .order-inputs #order-porfit {
-  width: 46%;
+.order .container .order-page .order-form .credit-order .order-inputs .order-input .input-required {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+.order .container .order-page .order-form .credit-order .order-inputs #order-profit {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .order .container .order-page .order-form .credit-order .order-inputs #order-profit {
+    width: 46%;
+  }
 }
 .order .container .order-page .order-check {
   display: flex;
@@ -1265,6 +1342,11 @@ header .nav .container .nav-menu .hot-call span {
 .order .container .order-page .order-check label {
   font-size: 12px;
 }
+.order .container .order-page .order-check label .input-required {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+}
 .order .container .order-page .order-submit {
   text-align: center;
   padding: 15px 0;
@@ -1276,6 +1358,182 @@ header .nav .container .nav-menu .hot-call span {
   border: none;
   font-weight: bold;
   font-size: 18px;
+  border-radius: 10px;
+}
+
+.partnership {
+  padding-top: 0;
+}
+.partnership .container .partner-head h2 {
+  color: #ff6b00;
+  font-weight: bold;
+}
+.partnership .container.select {
+  display: none;
+}
+.partnership .container .companies .companies-category {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f5f5f6;
+  border-radius: 10px;
+  padding: 30px;
+}
+.partnership .container .companies .companies-category .choose-category {
+  padding: 15px;
+}
+.partnership .container .companies .companies-category .choose-category p {
+  text-align: center;
+}
+.partnership .container .companies .companies-category .choose-category #category-names {
+  padding: 15px 50px;
+  width: 100%;
+  border-radius: 30px;
+  color: #ff6b00;
+  font-weight: bold;
+  border-color: rgba(0, 0, 0, 0.171);
+}
+.partnership .container .companies .companies-category .companies-filter {
+  width: 80%;
+}
+.partnership .container .companies .companies-category .companies-filter p {
+  font-size: 15px;
+  text-align: center;
+}
+.partnership .container .companies .companies-category .companies-filter .filter {
+  padding: 15px 50px;
+  width: 100%;
+  border-radius: 30px;
+  color: #ff6b00;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+}
+.partnership .container .companies .companies-category .companies-filter input:focus {
+  outline: none;
+}
+.partnership .container .companies #companies-cards {
+  margin-top: 30px;
+}
+.partnership .container .companies #companies-cards .partner-card {
+  height: 0px;
+  margin: 5px;
+}
+.partnership .container .companies #companies-cards .partner-card.select {
+  display: none;
+}
+@media (min-width: 992px) {
+  .partnership .container .companies #companies-cards .partner-card {
+    height: 520px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner {
+    background-color: #f5f5f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px 50px;
+    border-radius: 10px;
+    height: 100%;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .img {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-height: 50px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .company-name {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 0;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .company-category {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.418);
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .credit-months {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .credit-months .month-text {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    font-size: 12px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .credit-months .month-text .month-numb {
+    color: black;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .credit-months .month-text span {
+    color: #ff6b00;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-border {
+    position: relative;
+    z-index: 2;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 15px;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-border p {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4px 10px;
+    font-size: 12px;
+    background-color: #f5f5f6;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-percent {
+    margin-top: 20px;
+    background-color: #ff6b00;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-percent .icon {
+    display: flex;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-percent .icon p {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #ff6b00;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-percent .icon span {
+    padding: 0 5px;
+    font-size: 12px;
+  }
 }
 
 body.dark {
@@ -1300,8 +1558,11 @@ body.dark header .topbar .top-right .dark-mode-icon {
   color: black !important;
 }
 body.dark header .topbar .top-right .lang, body.dark header .topbar .top-right .search-icon {
-  background-color: black !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
   color: #fff !important;
+}
+body.dark header .mobile-topbar {
+  background-color: black;
 }
 body.dark header .nav .menu-services .services li a {
   color: #fff !important;
@@ -1311,6 +1572,38 @@ body.dark header .nav .hot-call {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 body.dark header .nav .hot-call span {
+  color: #fff !important;
+}
+body.dark header .nav .nav-menu .mobile-menu .mobile-menu-bar {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop {
+  background-color: black;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .btn-mobile-close {
+  color: #fff !important;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 5px 10px;
+  border: none;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-services li a, body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-menu li a {
+  color: #fff !important;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-right .personal,
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-right .business {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-right .business {
+  color: #fff !important;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-right .dark-mode-icon {
+  background-color: #fff !important;
+  color: black !important;
+}
+body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-right .lang, body.dark header .nav .nav-menu .mobile-menu #offcanvasTop .offcanvas-body .mobile-top-right .search-icon {
+  background-color: rgba(255, 255, 255, 0.1) !important;
   color: #fff !important;
 }
 body.dark main .swiper {
@@ -1336,18 +1629,30 @@ body.dark main .exchange .exchange-info {
 }
 body.dark main .exchange .exchange-info .exchange-calculator {
   background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff;
 }
 body.dark main .exchange .exchange-info .exchange-calculator .calculator-left,
 body.dark main .exchange .exchange-info .exchange-calculator .calculator-right {
   background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff;
 }
 body.dark main .exchange .exchange-info .exchange-calculator .calculator-left input,
 body.dark main .exchange .exchange-info .exchange-calculator .calculator-right input {
   background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff;
 }
 body.dark main .exchange .exchange-info .exchange-calculator .calculator-left input select,
 body.dark main .exchange .exchange-info .exchange-calculator .calculator-right input select {
   background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark main .exchange .exchange-info .exchange-table {
+  color: #fff;
+}
+body.dark main .exchange .exchange-info .exchange-table .table th {
+  color: #fff;
+}
+body.dark main .exchange .exchange-info .exchange-table .table td {
+  color: #fff !important;
 }
 body.dark main .news .news-cards .inner {
   background-color: rgba(255, 255, 255, 0.1) !important;
@@ -1365,6 +1670,50 @@ body.dark main .credits .container .credit-information .inner .credit-more .more
   background-color: rgba(255, 255, 255, 0.1) !important;
   border-color: rgba(255, 255, 255, 0.4666666667);
   color: grey;
+}
+body.dark main .order-table .container table {
+  color: #fff;
+}
+body.dark main .partnership .container .companies .companies-category {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark main .partnership .container .companies .companies-category #category-names {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark main .partnership .container .companies .companies-category .filter {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark main .partnership .container .companies .companies-category .filter::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7333333333);
+}
+body.dark main .partnership .container .companies .companies-category .filter::placeholder {
+  color: rgba(255, 255, 255, 0.7333333333);
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .img {
+  filter: invert(1) grayscale(1);
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .company-name {
+  color: #fff;
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .company-category {
+  color: #fff;
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .credit-months .month-text {
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.301);
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .credit-months .month-text .month-numb {
+  color: #fff;
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-border {
+  background-color: rgba(255, 255, 255, 0.301);
+}
+body.dark main .partnership .container .companies #companies-cards .partner-card .inner .cashback .cashback-border p {
+  background-color: black;
+  padding: 0 5px;
 }
 body.dark footer .container .footer-menu .footer-main-menu li a {
   color: #fff !important;

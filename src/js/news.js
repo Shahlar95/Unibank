@@ -76,15 +76,15 @@ async function newsUi(){
                             <form class="form-update" id="news-form-update">
                                 <div class="add-news-input">
                                     <label for="news-title-update"-update>Xəbərin başlığı</label>
-                                    <input type="text" placeholder="başlıq" id="news-title-update">
+                                    <input type="text" placeholder="başlıq" id="news-title-update" required>
                                 </div>
                                 <div class="add-news-input">
                                     <label for="news-body-update">Xəbərin mətni</label>
-                                    <input type="text" placeholder="mətn" id="news-body-update">
+                                    <input type="text" placeholder="mətn" id="news-body-update" required>
                                 </div>
                                 <div class="add-news-input">
                                     <label for="news-date-update">Xəbərin tarixi</label>
-                                    <input type="date" placeholder="tarix" id="news-date-update">
+                                    <input type="date" placeholder="tarix" id="news-date-update" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                               </form>
@@ -106,47 +106,6 @@ async function newsUi(){
 
   newsUi()
 
-//   const more = document.querySelector('.more')
-//   async function waitForNewsUi() {
-//     await newsUi();
-//     const pageNewsCount = document.querySelectorAll("#news-page .col-lg-12");
-    
-//     let counter = 0;
-//     let counter2 = 3
-//     more.addEventListener('click', function(){
-//         counter2 = counter2 + 1
-//         uiPagesNews()
-//         console.log(counter2);
-//     })
-//     function uiPagesNews(){
-//         pageNewsCount.forEach(item => {
-//             if (counter >= counter2) {
-//                 item.style.display = 'none'; 
-//             }
-//             counter++;
-           
-//         });
-//     }
-//     uiPagesNews()
-  
-// }
-
-
-// waitForNewsUi();
-
-//   more.addEventListener('click', function(){
-//       const countNewsMore = data.length - countNews
-//       console.log(countNewsMore);
-//     //   console.log(countNews);
-//       if(countNewsMore > 0){
-//         countNews = countNews + 1
-       
-       
-//       }
-//       else{
-//         more.style.display = 'none'
-//       }
-//   })
 
 
 
@@ -213,9 +172,9 @@ setTimeout(() => {
 }, 1000);
 
 async function updateNewsPut(id){
-    const title = document.querySelector('#news-title').value;
-    const body = document.querySelector('#news-body').value;
-    const date = document.querySelector('#news-date').value;
+    const title = document.querySelector('#news-title-update').value;
+    const body = document.querySelector('#news-body-update').value;
+    const date = document.querySelector('#news-date-update').value;
 
     const API = 'http://localhost:4444/news'
     try {
@@ -231,6 +190,7 @@ async function updateNewsPut(id){
             }
         });
         const data = await response.text();
+        newsUi();
         console.log(data);
     } catch (error) {
         console.error(error);
@@ -239,19 +199,49 @@ async function updateNewsPut(id){
 
 setTimeout(() => {
     const updateNews = document.querySelectorAll('.update-news');
-    const form = document.querySelector('#news-form');
-    updateNews.forEach(item =>{
-        const cardId = item.parentNode.parentNode.parentNode.id;
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // updateNewsPut(cardId)
-           
-        });
-      
-    })
+    const form = document.querySelectorAll('.form-update');
+    console.log(form);
+   
     
+        let newsId ;
+        updateNews.forEach(item =>{
+            item.addEventListener('click', function(){
+                newsId  =  item.parentNode.parentNode.parentNode.id;
+                console.log(newsId);
+              
+        })
+        form.forEach(element =>{
+            element.addEventListener('submit', function (e) {
+                e.preventDefault();
+                updateNewsPut(newsId)
+        })
+        })
+ 
+    });
 }, 1000);
 
+function customValidation(){
+   
+    const allInput = document.querySelectorAll('.add-news-input input')
+    
+    allInput.forEach(item => {
+        item.addEventListener('input', function(){
+            if (item.value == "") {
+                
+                
+                item.classList.add('empty')
+                
+            }else{
+                item.classList.remove('empty')
+    
+        
+            }
+        })
+    })
 
+   
+   
+}
+
+customValidation()
 

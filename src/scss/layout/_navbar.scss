@@ -183,6 +183,12 @@ header {
                     @include breakpoint('large'){
                         display: none;
                     }
+                    .btn-mobile-close{
+                        
+                        font-weight: bold;
+                        padding: 5px 10px;
+                        border: none;
+                      }
                     button{
                         padding: 0;
                         margin:0;

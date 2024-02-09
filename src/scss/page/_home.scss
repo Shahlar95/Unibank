@@ -261,7 +261,9 @@
 
                         .partnership {
                             width: 50%;
-
+                            a{
+                                color: #545454;
+                            }
                             @include breakpoint('large') {
                                 width: auto;
                             }
@@ -445,7 +447,7 @@
                         border: 1px solid rgba(50, 50, 50, .1);
                         border-radius: 5px;
                         width: 280px;
-
+                        @include flex($just:space-between);
                         input {
                             border: none;
                         }
@@ -468,8 +470,24 @@
                             visibility: visible;
                         }
                     }
+                   
+                    
+                    
 
+                }
+                
 
+            }
+            .exchange-results{
+                text-align: center;
+
+                h2{
+                    text-align: center;
+                }
+                h3{
+                    text-align: center;
+                    color: $darkPrimaryColor;
+                    font-weight: bold;
                 }
             }
         }
@@ -539,7 +557,8 @@
                     color: #fff;
                     line-height: 16px;
                     font-weight: bold;
-
+                    width: 100%;
+                    height: 100%;
                     }
                 }
                 .more{

@@ -1,0 +1,181 @@
+.partnership{
+    padding-top:0 ;
+    .container{
+        .partner-head{
+            h2{
+                color:$darkPrimaryColor;
+            font-weight: bold;
+            }
+        }
+        &.select{
+            display: none;
+           
+        }
+        
+        .companies{
+            .companies-category{
+                @include flex($just:flex-start,$align:center);
+                background-color: $mainBackgroundColor;
+                border-radius: 10px;
+                padding: 30px;
+                .choose-category{
+                    padding: 15px;
+                   
+                    p{
+                        text-align: center;
+                        
+                    }
+                    #category-names{
+                        padding: 15px 50px;
+                        width: 100%;
+                        border-radius: 30px;
+                        color: $darkPrimaryColor;
+                        font-weight: bold;
+                        border-color: rgba(0, 0, 0, 0.171)
+                    }
+                }
+                .companies-filter{
+                    width: 80%;
+                    p{
+                        font-size: 15px;
+                        text-align: center;
+                    }
+                    .filter{
+                        padding: 15px 50px;
+                        width: 100%;
+                        border-radius: 30px;
+                        color: $darkPrimaryColor;
+                        font-weight: bold;
+                        border: 1px solid rgba(0, 0, 0, 0.171)
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                }
+            }
+            #companies-cards{
+                margin-top: 30px;
+                .partner-card{
+                    height: 0px;
+                    
+                    &.select{
+                        display: none;
+                       
+                    }
+                    
+
+                    margin: 5px;
+                    @include breakpoint('large'){
+                    height: 520px;
+                    .inner{
+                        background-color: $mainBackgroundColor;
+                        @include center();
+                        flex-direction: column;
+                        padding: 45px 50px;
+                        border-radius: 10px;
+                        height: 100%;
+                        
+                        .img{
+                            overflow: hidden;
+                            margin-bottom: 30px;
+                            img{
+                               
+                                width: 100%;
+                                object-fit: cover;
+                                max-height: 50px;
+                            }
+                        }
+                        .company-name{
+                            font-size: 16px;
+                            color: black;
+                            margin-bottom: 0;
+                        }
+                        .company-category{
+                            font-size: 13px;
+                            color: rgba(0, 0, 0, 0.418);
+                        }
+                        .credit-months{
+                            display: flex;
+                            @include center();
+                            flex-wrap: wrap;
+                            padding-top: 10px;
+                            .month-text{
+                                background-color: #fff;
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 50%;
+                                @include center();
+                                flex-direction: column;
+                                border: 1px solid rgba(0, 0, 0, 0.123);
+                                font-size: 12px;
+                                .month-numb{
+                                    color: black;
+                                }
+                                span{
+                                    color: $darkPrimaryColor;
+                                   font-weight: bold;
+                                   font-size: 13px;
+    
+                                }
+                            }
+                        }
+                        .cashback{
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-top: 20px;
+                            .cashback-border{
+                                position: relative;
+                                z-index: 2;
+                                height: 1px;
+                                background-color: rgba(0,0,0,.1);
+                                width: 100%;
+                                margin-top: 15px;
+                            p{
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    padding: 4px 10px;
+                                    font-size: 12px;
+                                    background-color: $mainBackgroundColor;
+                                }
+                            }
+                            .cashback-percent{
+                                margin-top: 20px;
+                                background-color: $darkPrimaryColor;
+                                border-radius: 25px;
+                                color: #fff;
+                                font-weight: bold;
+                                padding: 15px 20px;
+                                @include flex($just:space-between,$align:center);
+                                .icon{
+                                    display: flex;
+                                    p{
+                                        width: 20px;
+                                        height: 20px;
+                                        border-radius: 50%;
+                                        background-color: #fff;
+                                        color: $darkPrimaryColor;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        margin-bottom: 0;
+                                    }
+                                    span{
+                                        padding: 0 5px;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        }
+                }
+                
+                   
+                }
+               
+            }
+        }
+    }
+}
