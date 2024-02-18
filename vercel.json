@@ -3,6 +3,16 @@
       { "src": "src/**/*.css", "use": "@vercel/static" },
       { "src": "src/**/*.scss", "use": "@vercel/static" },
       { "src": "src/**/*.js", "use": "@vercel/node" }
+    ],
+    "routes" : [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/test",
+            "dest": "/"
+        }
     ]
   }
   
