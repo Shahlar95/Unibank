@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch data.json --port 5555",
-    "build": "[my-framework] build --output public"
+    "start": "json-server --watch data.json --port 5555"
   },
   "author": "Shahlar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "build": "^0.1.4"
+  }
 }
