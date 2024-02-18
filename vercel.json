@@ -1,7 +1,8 @@
 {
-    "redirects": [
-      {
-        "source": "/(.*)"
-      }
+    "builds": [
+      { "src": "src/**/*.css", "use": "@vercel/static" },
+      { "src": "src/**/*.scss", "use": "@vercel/static" },
+      { "src": "src/**/*.js", "use": "@vercel/node" }
     ]
   }
+  
