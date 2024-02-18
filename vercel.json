@@ -1,5 +1,9 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
-  }
+  "builds": [
+    {
+      "src": "/src",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ]
+}
