@@ -1,5 +1,8 @@
 {
     "redirects": [
-      { "source": "/src", "destination": "./index.html", "permanent": true }
+      {
+        "source": "/(.*)",
+        "destination": "https://vercel.com/docs"
+      }
     ]
   }
