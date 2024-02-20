@@ -63,7 +63,7 @@ darkModeChange()
 
 let exchangeTable = document.querySelectorAll('.exchange-information');
 
-API = 'http://localhost:4444'
+API = 'https://json-server-for-for-vercel.vercel.app'
 
 
 async function moneyUi (){
