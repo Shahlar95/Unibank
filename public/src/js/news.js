@@ -40,7 +40,7 @@ darkModeChange()
 async function newsUi(){
     const pageNews = document.querySelector('#news-page');
     let writer = '';
-    const API = 'http://localhost:4444/news';
+    const API = 'https://json-server-for-for-vercel.vercel.app/news';
     try {
         const res = await fetch(API);
         if (!res.ok) {
@@ -117,7 +117,7 @@ async function newsUi(){
     const date = document.querySelector('#news-date').value;
     
     try{
-        const res = await fetch("http://localhost:4444/news", {
+        const res = await fetch("https://json-server-for-for-vercel.vercel.app/news", {
             method: "POST",
             body: JSON.stringify({
                 title: title,
@@ -146,7 +146,7 @@ function addPostSubmit() {
 addPostSubmit();
 
 async function deletePost(id){
-    const API = 'http://localhost:4444/news'
+    const API = 'https://json-server-for-for-vercel.vercel.app/news'
     fetch( `${API}/${id}`, {
         method: 'DELETE',
       })
@@ -176,7 +176,7 @@ async function updateNewsPut(id){
     const body = document.querySelector('#news-body-update').value;
     const date = document.querySelector('#news-date-update').value;
 
-    const API = 'http://localhost:4444/news'
+    const API = 'https://json-server-for-for-vercel.vercel.app/news'
     try {
         const response = await fetch( `${API}/${id}`, {
             method: 'PUT',

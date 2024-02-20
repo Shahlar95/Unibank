@@ -9,7 +9,7 @@ async function addOrderPsot(){
     const workPlace = document.querySelector('.work').value;
     const profit = document.querySelector('.profit').value;
     try{
-        const res = await fetch("http://localhost:4444/order", {
+        const res = await fetch("https://json-server-for-for-vercel.vercel.app/order", {
             method: "POST",
             body: JSON.stringify({
                 name: orderFullName,

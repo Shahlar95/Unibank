@@ -97,7 +97,7 @@ moneyUi()
   const Cards = document.querySelector('#cards')
 
   let writer = ''
-   const API = 'http://localhost:4444/news'
+   const API = 'https://json-server-for-for-vercel.vercel.app/news'
 
    try {
     const res = await fetch(API)
@@ -141,7 +141,7 @@ const input = document.querySelectorAll("input");
 input[0].addEventListener('change', function(e){
   
 })
-const apiUrl = "http://localhost:4444/rates";
+const apiUrl = "https://json-server-for-for-vercel.vercel.app/rates";
 let html = "";
 
 function currency() {

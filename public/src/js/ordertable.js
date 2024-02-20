@@ -41,7 +41,7 @@ darkModeChange()
 async function orderTableUi(){
     const tableBody = document.querySelector('.order-table-body')
     let writer = ''
-    const API = 'http://localhost:4444/order'
+    const API = 'https://json-server-for-for-vercel.vercel.app/order'
     try {
         const res = await fetch(API);
         if (!res.ok) {
@@ -74,7 +74,7 @@ orderTableUi()
 
 
 async function deleteOrderPost(id){
-    const API = 'http://localhost:4444/order'
+    const API = 'https://json-server-for-for-vercel.vercel.app/order'
     
     fetch( `${API}/${id}`, {
         method: 'DELETE',

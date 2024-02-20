@@ -46,7 +46,7 @@ async function partnerUi(){
    
     let writer = ''
     let writer2 = ' <option>Bütün</option>'
-    const API = 'http://localhost:4444/partnerships'
+    const API = 'https://json-server-for-for-vercel.vercel.app/partnerships'
     try {
         const res = await fetch(API);
         if (!res.ok) {
